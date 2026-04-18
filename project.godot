@@ -32,6 +32,7 @@ click={
 3d_physics/layer_1="lighthouse"
 3d_physics/layer_2="ship"
 3d_physics/layer_3="land"
+3d_physics/layer_4="port"
 3d_physics/layer_32="Water plane"
 
 [physics]

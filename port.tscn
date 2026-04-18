@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bc2hehfyao4yn"]
+
+[ext_resource type="Script" uid="uid://dwd8jdg2oydtv" path="res://port.gd" id="1_krwo4"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_1f70d"]
+inner_radius = 4.538
+outer_radius = 10.0
+rings = 32
+ring_segments = 16
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_krwo4"]
+points = PackedVector3Array(-4.1903, 0.0321666, -0.78506505, 4.1902947, 0.0321666, 0.7851212, 4.177429, -0.09800405, 0.78271073, 0.7848891, 0.0321666, -4.1903176, -1.823161, 1.3698547, 2.0668602, -0.7516229, -1.3466572, 3.0083425, 0.75132436, -1.3466693, -3.0083692, 0.75651884, 1.2941455, -3.2813966, 1.8968134, 1.1704901, 3.034935, -2.9186807, -1.2371048, -1.9038696, 2.5286717, -1.2323147, 2.4021506, -2.5315778, 1.0444105, -2.7845068, -1.6887537, -0.09741918, 3.898412, 3.4750156, -0.6111603, -2.1875784, 3.2811997, 1.2941726, -0.75671434, -3.7450268, -0.6134535, 1.6791027, 1.6891643, -0.09741161, 3.8981843, -3.5842922, 0.9281829, 1.5358846, -2.1878636, -0.6112219, -3.4748168, 3.0081646, -1.346694, -0.7515168, 3.2308645, 0.5488236, -2.5849047, -0.76272994, 1.0492461, 3.688709, -3.2808704, 1.2942327, -0.75675035, -3.007823, -1.3467574, 0.7515514, 3.508626, 0.5515818, 2.208736, -1.4258722, 0.5504806, -3.8897922, 0.64526004, -0.8725665, 3.8774707, -2.303847, -0.9916529, 3.0730376, -0.9000938, -0.99619037, -3.7296097, 1.9189684, -0.99103475, -3.326112, -3.5074804, 0.29154727, -2.338572, -2.8393104, 0.28985593, 3.0980337)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hl5ak"]
+radius = 30.0
+
+[node name="Port" type="StaticBody3D" unique_id=1155637826]
+script = ExtResource("1_krwo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=522469733]
+mesh = SubResource("TorusMesh_1f70d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1476247705]
+shape = SubResource("ConvexPolygonShape3D_krwo4")
+
+[node name="ShipDetection" type="Area3D" parent="." unique_id=1807181903]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShipDetection" unique_id=572689789]
+shape = SubResource("SphereShape3D_hl5ak")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[connection signal="body_entered" from="ShipDetection" to="." method="_on_ship_detection_body_entered"]

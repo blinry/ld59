@@ -1,7 +1,5 @@
-extends Node
+extends StaticBody3D
 
-var mouse_pos: Vector3
-var score: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_ship_detection_body_entered(body: Node3D) -> void:
+	body.arrive()

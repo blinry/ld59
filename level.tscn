@@ -3,7 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="2_vonw3"]
 [ext_resource type="Script" uid="uid://yen87dao27qd" path="res://camera.gd" id="3_0b4ue"]
-[ext_resource type="ArrayMesh" uid="uid://by7t0by1ogkju" path="res://levels/islands.tres" id="4_0b4ue"]
+[ext_resource type="ArrayMesh" uid="uid://be2webucffl3j" path="res://levels/islands.tres" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="5_f2txt"]
+[ext_resource type="Script" uid="uid://d3lle2ci74u0x" path="res://ui.gd" id="6_1ainy"]
+[ext_resource type="Script" uid="uid://bjvw8y2v1h7s8" path="res://ship_spawner.gd" id="7_n6hdu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_0b4ue"]
 radius = 10.0
@@ -34,10 +37,10 @@ repel = true
 transform = Transform3D(-0.45268378, 0, 0.8916711, 0, 1, 0, -0.8916711, 0, -0.45268378, -214.57271, 0, -203.29575)
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.050156, 0, -105.60761)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.04312, 6.1035156e-05, -313.453)
 
 [node name="Ship2" parent="." unique_id=2133466668 instance=ExtResource("2_vonw3")]
-transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 47.590775, 0, -108.24752)
+transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 217.58076, 0, -248.95483)
 
 [node name="Camera" type="Camera3D" parent="." unique_id=984262826]
 transform = Transform3D(1, 0, 0, 0, 0.39874908, 0.9170601, 0, -0.9170601, 0.39874908, 0, 340.777, 177.712)
@@ -75,3 +78,48 @@ mesh = ExtResource("4_0b4ue")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1588097666]
 transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 44.906677, -81.87286, 0)
 shape = SubResource("ConcavePolygonShape3D_f2txt")
+
+[node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_f2txt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220.16537, 13.406042, 32.615723)
+
+[node name="Port2" parent="." unique_id=737192671 instance=ExtResource("5_f2txt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.05478, 13.406042, 254.08038)
+
+[node name="Port3" parent="." unique_id=1795561692 instance=ExtResource("5_f2txt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.941757, 13.406042, 79.325165)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2100245027]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1880335187]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_1ainy")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/UI" unique_id=1164851655]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 50.0
+offset_right = 20.0
+offset_bottom = 73.0
+grow_horizontal = 2
+text = "SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShipSpawner" type="Node3D" parent="." unique_id=1671478317]
+script = ExtResource("7_n6hdu")
+
+[node name="Timer" type="Timer" parent="ShipSpawner" unique_id=93087466]
+wait_time = 0.521
+autostart = true
+
+[connection signal="timeout" from="ShipSpawner/Timer" to="ShipSpawner" method="_on_timer_timeout"]
