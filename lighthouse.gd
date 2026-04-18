@@ -1,6 +1,8 @@
 extends StaticBody3D
 
 @onready var light_pivot: Node3D = $LightPivot
+@onready var detection_area: Area3D = %DetectionArea
+
 
 var controlled = false
 
@@ -11,6 +13,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if detection_area.get_overlapping_bodies():
+		for boat in detection_area.get_overlapping_bodies():
+			boat.attract(self, delta)
+	
 	if Input.is_action_just_released("click"):
 		controlled = false
 	if controlled:
