@@ -6,16 +6,22 @@ extends StaticBody3D
 
 var controlled = false
 
+@export var repel = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	if repel:
+		var red = StandardMaterial3D.new()
+		red.albedo_color = Color(1, 0.2, 0.2, 0.5)
+		red.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		red.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		$LightPivot/LightCone.set_surface_override_material(0, red)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if detection_area.get_overlapping_bodies():
 		for boat in detection_area.get_overlapping_bodies():
-			boat.attract(self, delta)
+			boat.steer(self, delta, repel)
 	
 	if Input.is_action_just_released("click"):
 		controlled = false

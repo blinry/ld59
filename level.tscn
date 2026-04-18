@@ -21,13 +21,14 @@ size = Vector2(1000, 1000)
 [node name="Level" type="Node3D" unique_id=1587230160]
 
 [node name="Lighthouse" parent="." unique_id=675719651 instance=ExtResource("1_u52ul")]
-transform = Transform3D(0.3992451, 0, 0.91684425, 0, 1, 0, -0.91684425, 0, 0.3992451, 0, 0, 19.82619)
+transform = Transform3D(0.3992451, 0, 0.91684425, 0, 1, 0, -0.91684425, 0, 0.3992451, -95.35622, 0, 178.63905)
 
 [node name="Lighthouse2" parent="." unique_id=1820272564 instance=ExtResource("1_u52ul")]
-transform = Transform3D(0.9032379, 0, 0.42914015, 0, 1, 0, -0.42914015, 0, 0.9032379, 39.578197, 0, -50.878437)
+transform = Transform3D(0.9032379, 0, 0.42914015, 0, 1, 0, -0.42914015, 0, 0.9032379, 116.28381, 0, -29.341312)
+repel = true
 
 [node name="Lighthouse3" parent="." unique_id=1734996057 instance=ExtResource("1_u52ul")]
-transform = Transform3D(-0.45268378, 0, 0.8916711, 0, 1, 0, -0.8916711, 0, -0.45268378, -4.917095, 0, -157.46161)
+transform = Transform3D(-0.45268378, 0, 0.8916711, 0, 1, 0, -0.8916711, 0, -0.45268378, -214.57271, 0, -203.29575)
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.050156, 0, -105.60761)
@@ -36,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.050156, 0, -105.60761)
 transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 47.590775, 0, -108.24752)
 
 [node name="Camera" type="Camera3D" parent="." unique_id=984262826]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 206.23022, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 340.77704, 0)
 script = ExtResource("3_0b4ue")
 
 [node name="MouseRay" type="RayCast3D" parent="Camera" unique_id=1539500718]
