@@ -25,6 +25,6 @@ func _on_timer_timeout() -> void:
 	global_point.y = 0
 	
 	var instance = SHIP.instantiate()
-	instance.global_position = global_point
 	add_child(instance)
+	instance.global_position = global_point
 	instance.look_at(Vector3.ZERO)
