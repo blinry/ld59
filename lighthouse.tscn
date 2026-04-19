@@ -13,7 +13,7 @@ height = 20.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mdvqr"]
 height = 20.159302
-radius = 8.73291
+radius = 17.520508
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rolx0"]
 points = PackedVector3Array(0, 0, 0, 150, 0, -2000, -150, 0, -2000)
@@ -28,6 +28,7 @@ material = SubResource("StandardMaterial3D_rolx0")
 size = Vector3(300, 2000, 0.118)
 
 [node name="Lighthouse" type="StaticBody3D" unique_id=1820272564]
+process_mode = 3
 script = ExtResource("1_rolx0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1426643531]
@@ -54,4 +55,6 @@ transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -
 mesh = SubResource("PrismMesh_g4l8x")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="input_event" from="." to="." method="_on_lighthouse_input"]
 [connection signal="input_event" from="LightPivot/DetectionArea" to="." method="_on_input_event"]
+[connection signal="input_event" from="LightPivot/DetectionArea" to="." method="_on_light_input"]

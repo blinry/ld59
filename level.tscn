@@ -39,16 +39,8 @@ type = 1
 transform = Transform3D(-0.401958, 0, 0.7917543, 0, 0.88794434, 0, -0.7917543, 0, -0.401958, -193.67317, 0, -170.39087)
 type = 3
 
-[node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.47802, 6.1035156e-05, -211.86014)
-
-[node name="Ship3" parent="." unique_id=1958634124 instance=ExtResource("2_vonw3")]
-transform = Transform3D(0.33569825, 0, -0.9419696, 0, 1, 0, 0.9419696, 0, 0.33569825, 96.58152, 3.0517578e-05, 161.90512)
-
-[node name="Ship2" parent="." unique_id=2133466668 instance=ExtResource("2_vonw3")]
-transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 79.07088, -3.0517578e-05, -152.16275)
-
 [node name="Camera" type="Camera3D" parent="." unique_id=984262826]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 537.821, 17.898)
 script = ExtResource("3_0b4ue")
 
@@ -94,6 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.941757, 13.406042, 79.325
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2100245027]
 
 [node name="UI" type="Control" parent="CanvasLayer" unique_id=1880335187]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,6 +125,15 @@ script = ExtResource("7_n6hdu")
 [node name="Timer" type="Timer" parent="ShipSpawner" unique_id=93087466]
 wait_time = 10.0
 autostart = true
+
+[node name="Ship" parent="ShipSpawner" unique_id=422053590 instance=ExtResource("2_vonw3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.47802, 6.1035156e-05, -211.86014)
+
+[node name="Ship3" parent="ShipSpawner" unique_id=1958634124 instance=ExtResource("2_vonw3")]
+transform = Transform3D(0.33569825, 0, -0.9419696, 0, 1, 0, 0.9419696, 0, 0.33569825, 96.58152, 3.0517578e-05, 161.90512)
+
+[node name="Ship2" parent="ShipSpawner" unique_id=2133466668 instance=ExtResource("2_vonw3")]
+transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 79.07088, -3.0517578e-05, -152.16275)
 
 [connection signal="pressed" from="CanvasLayer/UI/Button" to="CanvasLayer/UI" method="_on_start_pressed"]
 [connection signal="timeout" from="ShipSpawner/Timer" to="ShipSpawner" method="_on_timer_timeout"]
