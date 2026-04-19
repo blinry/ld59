@@ -47,6 +47,7 @@ func steer(attractor, delta, type):
 
 func arrive():
 	Globals.score += 1
+	LevelManager.check_win_condition()
 	queue_free()
 
 func explode():

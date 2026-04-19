@@ -1,7 +1,6 @@
 extends Node3D
 
 
-
 var state = Globals.GameState.SETUP
 
 # Called when the node enters the scene tree for the first time.
