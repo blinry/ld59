@@ -7,6 +7,7 @@ const tutorial = preload("uid://vn0buurvd0c6")
 const evergiven = preload("uid://bvyygmmco2f2j")
 const spiral = preload("uid://cfig1wr5luath")
 const bay = preload("uid://d0ytexhnu3x6k")
+const push = preload("uid://6wfupb8dcwuh")
 
 
 var levels = [
@@ -14,6 +15,7 @@ var levels = [
 	bay,
 	spiral,
 	evergiven,
+	push,
 	big_level,
 ]
 var current_level_id = -1
