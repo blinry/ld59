@@ -5,6 +5,13 @@ enum GameState {
 	GAME
 }
 
+enum LighthouseType {
+	ATTRACT,
+	REPEL,
+	TURN_STARBOARD_SIDE,
+	TURN_PORT_SIDE
+}
+
 var mouse_pos: Vector3
 var score: int
 

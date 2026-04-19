@@ -9,16 +9,12 @@
 [ext_resource type="Script" uid="uid://d3lle2ci74u0x" path="res://ui.gd" id="6_1ainy"]
 [ext_resource type="Script" uid="uid://bjvw8y2v1h7s8" path="res://ship_spawner.gd" id="7_n6hdu"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_0b4ue"]
-radius = 10.0
-height = 20.0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vonw3"]
 albedo_color = Color(0, 0.30980393, 1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi3di"]
 material = SubResource("StandardMaterial3D_vonw3")
-size = Vector2(1000, 1000)
+size = Vector2(10000, 10000)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0b4ue"]
 
@@ -30,13 +26,23 @@ script = ExtResource("1_km5ld")
 
 [node name="Lighthouse" parent="." unique_id=675719651 instance=ExtResource("1_u52ul")]
 transform = Transform3D(0.3992451, 0, 0.91684425, 0, 1, 0, -0.91684425, 0, 0.3992451, -95.35622, 0, 178.63905)
+type = 3
 
 [node name="Lighthouse2" parent="." unique_id=1820272564 instance=ExtResource("1_u52ul")]
 transform = Transform3D(0.9032379, 0, 0.42914015, 0, 1, 0, -0.42914015, 0, 0.9032379, 116.28381, 0, -29.341312)
-repel = true
+type = 2
 
 [node name="Lighthouse3" parent="." unique_id=1734996057 instance=ExtResource("1_u52ul")]
-transform = Transform3D(-0.45268378, 0, 0.8916711, 0, 1, 0, -0.8916711, 0, -0.45268378, -193.67317, 0, -170.39087)
+transform = Transform3D(-0.401958, 0, 0.7917543, 0, 0.88794434, 0, -0.7917543, 0, -0.401958, -193.67317, 0, -170.39087)
+type = 2
+
+[node name="Lighthouse4" parent="." unique_id=1780271241 instance=ExtResource("1_u52ul")]
+transform = Transform3D(0.07346439, 0, 0.9972979, 0, 1, 0, -0.9972979, 0, 0.07346439, -19.428665, 0, -280.8695)
+type = 2
+
+[node name="Lighthouse5" parent="." unique_id=1053901268 instance=ExtResource("1_u52ul")]
+transform = Transform3D(0.5119081, 0, -0.85904026, 0, 1, 0, 0.85904026, 0, 0.5119081, 116.02139, 3.0517578e-05, -228.83232)
+type = 3
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.47802, 6.1035156e-05, -211.86014)
@@ -45,14 +51,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.47802, 6.1035156e-05, -21
 transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 79.07088, -3.0517578e-05, -152.16275)
 
 [node name="Camera" type="Camera3D" parent="." unique_id=984262826]
-transform = Transform3D(1, 0, 0, 0, 0.39874908, 0.9170601, 0, -0.9170601, 0.39874908, 0, 340.777, 177.712)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 537.821, 17.898)
 script = ExtResource("3_0b4ue")
 
 [node name="MouseRay" type="RayCast3D" parent="Camera" unique_id=1539500718]
 collision_mask = 2147483648
-
-[node name="TestPoint" type="MeshInstance3D" parent="Camera" unique_id=577121688]
-mesh = SubResource("SphereMesh_0b4ue")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=86076206]
 transform = Transform3D(1, 0, 0, 0, -0.25881904, 0.9659258, 0, -0.9659258, -0.25881904, 0, 142, 0)

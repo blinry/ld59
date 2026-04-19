@@ -22,12 +22,22 @@ func _process(delta: float) -> void:
 	if collision:
 		explode()
 
-func steer(attractor, delta, repel):
-	var target_angle =  global_position.direction_to(attractor.global_position).signed_angle_to(transform.basis.z,Vector3.DOWN)
-	if !repel:
-		target_angle += PI
+func steer(attractor, delta, type):
+	var relative_away_from_lighthouse =  global_position.direction_to(attractor.global_position).signed_angle_to(transform.basis.z,Vector3.DOWN)
+	
+	var relative_target_angle = 0
+	match type:
+		Globals.LighthouseType.ATTRACT:
+			relative_target_angle = relative_away_from_lighthouse + PI
+		Globals.LighthouseType.REPEL:
+			relative_target_angle = relative_away_from_lighthouse
+		Globals.LighthouseType.TURN_PORT_SIDE:
+			relative_target_angle = PI/2
+		Globals.LighthouseType.TURN_STARBOARD_SIDE:
+			relative_target_angle = -PI/2
+
 	#rotate_y(deg_to_rad(max_rotation_speed*delta))
-	rotation.y = lerp_angle(rotation.y, rotation.y + target_angle, rotation_speed)
+	rotation.y = lerp_angle(rotation.y, rotation.y + relative_target_angle, rotation_speed)
 
 func arrive():
 	Globals.score += 1
@@ -42,5 +52,5 @@ func explode():
 		black.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		black.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		$Body.set_surface_override_material(0, black)
-		$Front.set_surface_override_material(0, black)
+		$Body/Front.set_surface_override_material(0, black)
 		crashed = true

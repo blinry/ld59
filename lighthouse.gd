@@ -1,27 +1,46 @@
+@tool
 extends StaticBody3D
 
 @onready var light_pivot: Node3D = $LightPivot
 @onready var detection_area: Area3D = %DetectionArea
 
-
 var controlled = false
 
-@export var repel = false
+@export var type: Globals.LighthouseType = Globals.LighthouseType.ATTRACT:
+	set(new_type):
+		type = new_type
+		update_color()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if repel:
-		var red = StandardMaterial3D.new()
-		red.albedo_color = Color(1, 0.2, 0.2, 0.5)
-		red.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		red.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		$LightPivot/LightCone.set_surface_override_material(0, red)
+	pass
 
+func update_color():
+	var color
+	match type:
+		Globals.LighthouseType.REPEL:
+			color = Color(0.583, 0.031, 0.467, 0.5)
+		Globals.LighthouseType.TURN_PORT_SIDE:
+			color = Color(1, 0.2, 0.2, 0.5)
+		Globals.LighthouseType.TURN_STARBOARD_SIDE:
+			color = Color(0.285, 0.38, 0.119, 0.502)
+		_:
+			color = Color(1.0, 1.0, 0.192, 0.502)
+
+	var material = StandardMaterial3D.new()
+	material.albedo_color = color
+	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	$LightPivot/LightCone.set_surface_override_material(0, material)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+
 	if detection_area.get_overlapping_bodies():
 		for boat in detection_area.get_overlapping_bodies():
-			boat.steer(self, delta, repel)
+			boat.steer(self, delta, type)
 	
 	#var state = get_node("..").state
 	var state = get_tree().get_current_scene().state
