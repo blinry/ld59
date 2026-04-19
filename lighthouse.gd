@@ -56,8 +56,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	var state = get_tree().get_current_scene().state
-	#if state != Globals.GameState.SETUP:
-	#	return
+	if state != Globals.GameState.SETUP:
+		return
 	if event.is_action_pressed("click"):
 		dragged = true
 

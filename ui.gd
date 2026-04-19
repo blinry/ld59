@@ -17,13 +17,12 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	if get_tree().get_current_scene().state == Globals.GameState.SETUP:
 		get_tree().get_current_scene().enter_state(Globals.GameState.GAME)
-		$Button.text = "Pause"
+		#$Button.text = "Pause"
 		unpaused.emit()
+		$Button.hide()
 	elif get_tree().get_current_scene().state == Globals.GameState.GAME:
 		get_tree().get_current_scene().enter_state(Globals.GameState.SETUP)
-		$Button.text = "Start"
-		
-	#$Button.visible = false
+		#$Button.text = "Start"
 
 
 func _on_reset_pressed() -> void:
