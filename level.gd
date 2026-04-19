@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var commons: Node3D = $LevelCommons
 
 var state = Globals.GameState.SETUP
 
@@ -17,3 +18,6 @@ func enter_state(state):
 		get_tree().paused = false
 	if state == Globals.GameState.SETUP:
 		get_tree().paused = true
+
+func get_commons():
+	return commons

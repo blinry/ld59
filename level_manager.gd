@@ -29,5 +29,6 @@ func load_next():
 		get_tree().change_scene_to_packed(level)
 
 func check_win_condition():
-	if Globals.score >= 1:
+	var ships_needed = get_tree().get_current_scene().get_commons().ships_needed
+	if Globals.score >= ships_needed:
 		load_next()
