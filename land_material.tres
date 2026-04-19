@@ -1,4 +1,14 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cabhkhjkuxawv"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cabhkhjkuxawv"]
+
+[ext_resource type="Shader" uid="uid://cf2jep27pkjsj" path="res://levels/ground_shader.gdshader" id="1_rfo8b"]
 
 [resource]
-albedo_color = Color(0.16626775, 0.380993, 0.12942463, 1)
+render_priority = 0
+shader = ExtResource("1_rfo8b")
+shader_parameter/green_threshold = 6.000000238419201
+shader_parameter/gray_threshold = 14.500000365079401
+shader_parameter/white_threshold = 100.0
+shader_parameter/white = Color(1, 1, 1, 1)
+shader_parameter/gray = Color(0.47397572, 0.47397572, 0.47397572, 1)
+shader_parameter/green = Color(0.41996893, 0.9999998, 0.4352392, 1)
+shader_parameter/sand = Color(0.92186856, 0.8748534, 0.7627852, 1)

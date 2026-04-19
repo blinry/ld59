@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="4_0r7y0"]
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="5_mh2xa"]
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="7_e0fft"]
+[ext_resource type="Material" uid="uid://cabhkhjkuxawv" path="res://land_material.tres" id="8_lvi27"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mh2xa"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsvv0"]
 resource_local_to_scene = true
 size = Vector3(732.2753, 0, 53.097473)
 
@@ -26,7 +27,7 @@ transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 0, 1, 1, 4.371139e-08
 
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("3_0r7y0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.66925, 20.986969, -1154.0267)
-shape = SubResource("BoxShape3D_mh2xa")
+shape = SubResource("BoxShape3D_gsvv0")
 interval = 10
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("4_0r7y0")]
@@ -48,6 +49,7 @@ collision_mask = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1384485118]
 mesh = ExtResource("2_qvoh0")
+surface_material_override/0 = ExtResource("8_lvi27")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=711271186]
 shape = SubResource("ConcavePolygonShape3D_e0fft")

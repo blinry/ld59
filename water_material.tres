@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cx2femey0lg3x"]
+
+[ext_resource type="Shader" uid="uid://51fu3c5e01w" path="res://water_shader.gdshader" id="1_pmio7"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mcwpg"]
+noise_type = 2
+frequency = 0.0217
+fractal_octaves = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6lqol"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_mcwpg")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2vbid"]
+noise_type = 2
+frequency = 0.1602
+fractal_octaves = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ydnkl"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_2vbid")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_pmio7")
+shader_parameter/noise1 = SubResource("NoiseTexture2D_6lqol")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_ydnkl")
+shader_parameter/blue = Color(0.028139547, 0.26677322, 1, 1)
+shader_parameter/timescale = 0.0010000000475

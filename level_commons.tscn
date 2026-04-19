@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4aqu7xki3vkn" path="res://level_commons.gd" id="1_8auud"]
 [ext_resource type="Script" uid="uid://yen87dao27qd" path="res://camera.gd" id="1_vvcku"]
 [ext_resource type="Script" uid="uid://d3lle2ci74u0x" path="res://ui.gd" id="2_8auud"]
+[ext_resource type="Material" uid="uid://cx2femey0lg3x" path="res://water_material.tres" id="3_8t037"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vonw3"]
 albedo_color = Color(0, 0.30980393, 1, 1)
@@ -36,6 +37,7 @@ metadata/_edit_lock_ = true
 [node name="WaterMesh" type="MeshInstance3D" parent="Water" unique_id=2029546510]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018066406, 1.6384888, -3.0690918)
 mesh = SubResource("PlaneMesh_oi3di")
+surface_material_override/0 = ExtResource("3_8t037")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Water" unique_id=583933840]
