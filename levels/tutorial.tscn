@@ -33,7 +33,7 @@ transform = Transform3D(0.65430534, 0, -0.7562305, 0, 1, 0, 0.7562305, 0, 0.6543
 transform = Transform3D(-0.2227226, 0, -0.9748819, 0, 1, 0, 0.9748819, 0, -0.2227226, 28.690071, -7.6293945e-06, 39.902412)
 
 [node name="Ship2" parent="." unique_id=186411588 instance=ExtResource("2_rbh7r")]
-transform = Transform3D(-0.6196557, 0, 0.7848737, 0, 1, 0, -0.7848737, 0, -0.6196557, 191.12997, 0, -10.614365)
+transform = Transform3D(-0.47567028, 0, -0.87962365, 0, 1, 0, 0.87962365, 0, -0.47567028, 159.52303, 0, -69.7108)
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
 transform = Transform3D(0.95957965, 0, 0.28143722, 0, 1, 0, -0.28143722, 0, 0.95957965, 171.16167, 1.5258789e-05, 93.5638)

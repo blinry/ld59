@@ -14,8 +14,8 @@ var levels = [
 	tutorial,
 	bay,
 	spiral,
-	evergiven,
 	push,
+	evergiven,
 	big_level,
 ]
 var current_level_id = -1

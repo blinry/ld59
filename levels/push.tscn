@@ -43,7 +43,7 @@ transform = Transform3D(326.3931, 0, -378.7711, 0, 500, 0, 378.7711, 0, 326.3931
 shape = SubResource("ConcavePolygonShape3D_0ob7o")
 
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("4_32636")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.654167, 31.69989, 232.88458)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.654167, 31.69989, 196.08249)
 shape = SubResource("BoxShape3D_32636")
 
 [node name="ShipSpawner2" parent="." unique_id=174740086 instance=ExtResource("4_32636")]
