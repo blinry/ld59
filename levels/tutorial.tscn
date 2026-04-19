@@ -5,25 +5,36 @@
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="2_rbh7r"]
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="3_0fvvq"]
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="4_aaho8"]
+[ext_resource type="Script" uid="uid://ci6gwcloqi3o" path="res://levels/tutorial_ui.gd" id="6_aaho8"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0fvvq"]
 top_radius = 30.0
 bottom_radius = 30.0
 height = 10.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gdrka"]
-size = Vector3(100, 10, 100)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_aaho8"]
+height = 10.0
+radius = 30.0
 
 [node name="TutorialLevel" type="Node3D" unique_id=1504619277]
 script = ExtResource("1_0fvvq")
 
 [node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("1_khcq3")]
 
+[node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
+transform = Transform3D(1, 0, 0, 0, 0.7177132, 0.6963389, 0, -0.6963389, 0.7177132, 70.140045, 174.46526, 194.13405)
+
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("2_rbh7r")]
 transform = Transform3D(0.65430534, 0, -0.7562305, 0, 1, 0, 0.7562305, 0, 0.65430534, -299.4584, 0, -144.03676)
 
+[node name="Ship3" parent="." unique_id=1667829318 instance=ExtResource("2_rbh7r")]
+transform = Transform3D(-0.48810345, 0, -0.8727858, 0, 1, 0, 0.8727858, 0, -0.48810345, 7.270447, 0, 52.24823)
+
+[node name="Ship2" parent="." unique_id=186411588 instance=ExtResource("2_rbh7r")]
+transform = Transform3D(-0.6196557, 0, 0.7848737, 0, 1, 0, -0.7848737, 0, -0.6196557, 515.32715, 0, -147.83171)
+
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.79019, 0, -14.817375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.768524, 0, 4.782425)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=70155308]
 collision_layer = 4
@@ -33,27 +44,36 @@ collision_mask = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)
 mesh = SubResource("CylinderMesh_0fvvq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1713688142]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1689444092]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)
-shape = SubResource("BoxShape3D_gdrka")
+shape = SubResource("CylinderShape3D_aaho8")
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("4_aaho8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.11065, 0, 10.9520645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.202225, 0, 3.1547089)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1423592315]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1289845108]
+[node name="TutorialUI" type="Control" parent="CanvasLayer" unique_id=1289845108]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("6_aaho8")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1437113812]
+[node name="Label" type="Label" parent="CanvasLayer/TutorialUI" unique_id=1437113812]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 19.0
 offset_right = 131.0
 offset_bottom = 42.0
-text = "How to play:
+theme_override_font_sizes/font_size = 30
+text = "Setup phase:
 
-- Drag the light houses around."
+Drag the light houses around!
+Yellow light will attract ships.
+
+Then, click \"Start!\""
+
+[connection signal="unpaused" from="LevelCommons" to="CanvasLayer/TutorialUI" method="_on_level_unpaused"]
+
+[editable path="LevelCommons"]

@@ -1,5 +1,7 @@
 extends Control
 
+signal unpaused
+
 @onready var score_label: Label = %ScoreLabel
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +18,9 @@ func _on_start_pressed() -> void:
 	if get_tree().get_current_scene().state == Globals.GameState.SETUP:
 		get_tree().get_current_scene().enter_state(Globals.GameState.GAME)
 		$Button.text = "Pause"
+		unpaused.emit()
 	elif get_tree().get_current_scene().state == Globals.GameState.GAME:
 		get_tree().get_current_scene().enter_state(Globals.GameState.SETUP)
 		$Button.text = "Start"
+		
 	#$Button.visible = false

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://clv5nchp7wfnw"]
 
+[ext_resource type="Script" uid="uid://c4aqu7xki3vkn" path="res://level_commons.gd" id="1_8auud"]
 [ext_resource type="Script" uid="uid://yen87dao27qd" path="res://camera.gd" id="1_vvcku"]
 [ext_resource type="Script" uid="uid://d3lle2ci74u0x" path="res://ui.gd" id="2_8auud"]
 
@@ -13,6 +14,7 @@ size = Vector2(10000, 10000)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0b4ue"]
 
 [node name="LevelCommons" type="Node3D" unique_id=2043989954]
+script = ExtResource("1_8auud")
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1282504663]
 process_mode = 3
@@ -83,4 +85,5 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Start!"
 
+[connection signal="unpaused" from="CanvasLayer/UI" to="." method="_on_ui_unpaused"]
 [connection signal="pressed" from="CanvasLayer/UI/Button" to="CanvasLayer/UI" method="_on_start_pressed"]
