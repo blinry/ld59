@@ -26,6 +26,9 @@ func _physics_process(delta: float) -> void:
 		explode()
 
 func steer(attractor, delta, type):
+	if crashed:
+		return
+
 	var target_angle = 0
 	
 	var relative_away_from_lighthouse =  global_position.direction_to(attractor.global_position).signed_angle_to(transform.basis.z,Vector3.DOWN)
