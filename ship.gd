@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var speed: float = 10 # meters per second
 @export_range(0.0,360) var rotation_speed: float = 20 # degrees per second
+@onready var fire_particles: CPUParticles3D = %FireParticles
 
 var crashed = false
 
@@ -52,6 +53,7 @@ func arrive():
 
 func explode():
 	if not crashed:
+		fire_particles.emitting = true
 		print("boom!")
 		speed = 0
 		rotate_z(PI/8)
@@ -62,4 +64,5 @@ func explode():
 		$Body.set_surface_override_material(0, black)
 		$Body/Front.set_surface_override_material(0, black)
 		$Body/Roof.set_surface_override_material(0, black)
+		$Body/Chimney.set_surface_override_material(0, black)
 		crashed = true
