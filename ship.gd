@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var fire_particles: CPUParticles3D = %FireParticles
 @onready var smoke_particles: CPUParticles3D = %SmokeParticles
 @onready var fire_light: OmniLight3D = %FireLight
+@onready var prop: MeshInstance3D = %Prop
 
 var crashed = false
 
@@ -19,6 +20,9 @@ func _physics_process(delta: float) -> void:
 		global_position.y -= 2 * delta
 		if global_position.y < -5:
 			queue_free()
+
+	if !crashed:
+		prop.rotate_z(0.1)
 
 	velocity = -transform.basis.z * speed
 	var collision = move_and_slide()
@@ -69,10 +73,10 @@ func explode():
 		black.albedo_color = Color(0.206, 0.206, 0.206, 1.0)
 		black.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		black.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		$Body.set_surface_override_material(0, black)
-		$Body/Front.set_surface_override_material(0, black)
-		$Body/Roof.set_surface_override_material(0, black)
-		$Body/Chimney.set_surface_override_material(0, black)
+		for i in 6:
+			$Body.set_surface_override_material(i-1, black)
+	
+		$Prop.set_surface_override_material(0, black)
 		crashed = true
 
 

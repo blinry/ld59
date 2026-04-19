@@ -2,16 +2,9 @@
 
 [ext_resource type="Script" uid="uid://oxqhqjikch46" path="res://ship.gd" id="1_l3rv8"]
 [ext_resource type="Texture2D" uid="uid://dj1kpv8xykp6" path="res://textures/smoke/smoke_particle1-sheet.png" id="2_4cq66"]
+[ext_resource type="ArrayMesh" uid="uid://djm0bdijavclo" path="res://models/shippy.res" id="2_78o8j"]
 [ext_resource type="Texture2D" uid="uid://b68kn8iqilviy" path="res://textures/explosion/explosion1-sheet.png" id="3_v4325"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_4icm7"]
-size = Vector3(5, 3, 10)
-
-[sub_resource type="PrismMesh" id="PrismMesh_4icm7"]
-size = Vector3(5, 2, 3)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_v4325"]
-height = 5.883
+[ext_resource type="ArrayMesh" uid="uid://fv076so3v218" path="res://models/prop.res" id="3_xpsff"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l3rv8"]
 size = Vector3(11.930908, 50, 25.995468)
@@ -93,20 +86,13 @@ collision_mask = 6
 script = ExtResource("1_l3rv8")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=1304163131]
-transform = Transform3D(2.3817632, 0.00086981425, 0.0025612542, -0.0008653819, 2.3817613, -0.004142212, -0.0025627553, 0.0041412837, 2.38176, 0, 2.519766, 2)
-mesh = SubResource("BoxMesh_4icm7")
+transform = Transform3D(-4.9999967, -0.001826036, -0.0053772195, -0.0018166822, 4.999992, -0.008695686, 0.005380387, -0.008693727, -4.999989, 0, -0.7970393, 2)
+mesh = ExtResource("2_78o8j")
 
-[node name="Front" type="MeshInstance3D" parent="Body" unique_id=2081961647]
-transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, -5.9849772)
-mesh = SubResource("PrismMesh_4icm7")
-
-[node name="Roof" type="MeshInstance3D" parent="Body" unique_id=1364777111]
-transform = Transform3D(0.6525239, 1.0686563e-11, 0, 1.4779289e-12, 0.6525238, 0, 5.820766e-11, 0, 0.65252393, -0.000629765, 1.7333267, -0.003014505)
-mesh = SubResource("BoxMesh_4icm7")
-
-[node name="Chimney" type="MeshInstance3D" parent="Body" unique_id=1450847175]
-transform = Transform3D(1, 3.1832315e-12, 0, -4.638423e-11, 1, 0, 6.9849193e-10, -4.656613e-10, 1, -1.2633617, 1.7386057, 2.9346209)
-mesh = SubResource("CylinderMesh_v4325")
+[node name="Prop" type="MeshInstance3D" parent="." unique_id=812330098]
+unique_name_in_owner = true
+transform = Transform3D(5, 0, 0, 0, -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 2.9340968, 18.082972)
+mesh = ExtResource("3_xpsff")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1110046145]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046020508, 25, 0.707222)
@@ -114,7 +100,7 @@ shape = SubResource("BoxShape3D_l3rv8")
 
 [node name="SmokeParticles" type="CPUParticles3D" parent="." unique_id=1924222923]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 16.814562, 9.088833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5173798, 10.4360895, 14.478642)
 amount = 50
 lifetime = 10.0
 randomness = 1.0
