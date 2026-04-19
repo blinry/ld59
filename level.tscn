@@ -27,7 +27,15 @@ size = Vector3(41.217896, 0, 519.03845)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i2t4f"]
 resource_local_to_scene = true
+size = Vector3(41.217896, 0, 615.1092)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8cye3"]
+resource_local_to_scene = true
 size = Vector3(672.4016, 0, 35.0419)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2orkt"]
+resource_local_to_scene = true
+size = Vector3(911.83215, 0, 35.0419)
 
 [node name="Level" type="Node3D" unique_id=1587230160]
 script = ExtResource("1_km5ld")
@@ -130,9 +138,17 @@ text = "Start!"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 622.9446, 6.406, 6.9815674)
 shape = SubResource("BoxShape3D_km5ld")
 
+[node name="ShipSpawner4" parent="." unique_id=1902173869 instance=ExtResource("7_km5ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -451.06738, 6.406, 55.016937)
+shape = SubResource("BoxShape3D_i2t4f")
+
 [node name="ShipSpawner2" parent="." unique_id=1321491666 instance=ExtResource("7_km5ld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 172.09857, 6.406, 481.11755)
-shape = SubResource("BoxShape3D_i2t4f")
+shape = SubResource("BoxShape3D_8cye3")
+
+[node name="ShipSpawner3" parent="." unique_id=1793858131 instance=ExtResource("7_km5ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.971085, 6.406, -434.1819)
+shape = SubResource("BoxShape3D_2orkt")
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
 transform = Transform3D(0.97537315, 0, -0.22056125, 0, 1, 0, 0.22056125, 0, 0.97537315, -46.117996, 10.599945, 465.06827)
