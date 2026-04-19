@@ -4,7 +4,7 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_mcwpg"]
 noise_type = 2
-frequency = 0.0217
+frequency = 0.1425
 fractal_octaves = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6lqol"]
@@ -15,12 +15,12 @@ seamless = true
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_2vbid"]
 noise_type = 2
-frequency = 0.1602
+frequency = 0.25
 fractal_octaves = 2
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ydnkl"]
-width = 1024
-height = 1024
+width = 2048
+height = 2048
 noise = SubResource("FastNoiseLite_2vbid")
 seamless = true
 
@@ -29,5 +29,5 @@ render_priority = 0
 shader = ExtResource("1_pmio7")
 shader_parameter/noise1 = SubResource("NoiseTexture2D_6lqol")
 shader_parameter/noise2 = SubResource("NoiseTexture2D_ydnkl")
-shader_parameter/blue = Color(0.028139547, 0.26677322, 1, 1)
+shader_parameter/blue = Color(0.1836, 0.2727, 0.54, 1)
 shader_parameter/timescale = 0.0010000000475

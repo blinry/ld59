@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export_range(0.0,360) var rotation_speed: float = 20 # degrees per second
 @onready var fire_particles: CPUParticles3D = %FireParticles
 @onready var smoke_particles: CPUParticles3D = %SmokeParticles
+@onready var fire_light: OmniLight3D = %FireLight
 
 var crashed = false
 
@@ -54,6 +55,7 @@ func arrive():
 
 func explode():
 	if not crashed:
+		fire_light.visible = true
 		fire_particles.emitting = true
 		smoke_particles.emitting = false
 		$CrashParticleTimer.start()
@@ -73,3 +75,4 @@ func explode():
 
 func _on_crash_particle_timer_timeout() -> void:
 	fire_particles.emitting = false
+	fire_light.visible = false

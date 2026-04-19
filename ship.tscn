@@ -49,6 +49,44 @@ particles_anim_loop = true
 material = SubResource("StandardMaterial3D_78o8j")
 orientation = 2
 
+[sub_resource type="Animation" id="Animation_v4325"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireLight:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [13.832]
+}
+
+[sub_resource type="Animation" id="Animation_c3vuw"]
+resource_name = "burn"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireLight:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20000002, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [13.832, 8.499, 13.832]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78o8j"]
+_data = {
+&"RESET": SubResource("Animation_v4325"),
+&"burn": SubResource("Animation_c3vuw")
+}
+
 [node name="Ship" type="CharacterBody3D" unique_id=1958634124]
 collision_layer = 2
 collision_mask = 6
@@ -118,5 +156,19 @@ anim_speed_max = 5.0
 [node name="CrashParticleTimer" type="Timer" parent="." unique_id=1621227323]
 wait_time = 10.0
 one_shot = true
+
+[node name="FireLight" type="OmniLight3D" parent="." unique_id=968641997]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.886789, 0)
+visible = false
+light_color = Color(0.73716563, 0.47126567, 0, 1)
+light_energy = 13.832
+light_size = 0.713
+shadow_enabled = true
+omni_range = 144.346
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1962939105]
+libraries/ = SubResource("AnimationLibrary_78o8j")
+autoplay = &"burn"
 
 [connection signal="timeout" from="CrashParticleTimer" to="." method="_on_crash_particle_timer_timeout"]
