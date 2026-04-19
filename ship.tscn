@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://oxqhqjikch46" path="res://ship.gd" id="1_l3rv8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4icm7"]
-size = Vector3(5, 2, 10)
+size = Vector3(5, 3, 10)
 
 [sub_resource type="PrismMesh" id="PrismMesh_4icm7"]
-size = Vector3(5, 2, 2)
+size = Vector3(5, 2, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l3rv8"]
 size = Vector3(11.930908, 50, 25.995468)
@@ -17,11 +17,11 @@ collision_mask = 6
 script = ExtResource("1_l3rv8")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=1304163131]
-transform = Transform3D(2.381765, 0, 0, 0, 2.381765, 0, 0, 0, 2.381765, 0, 0.9017165, 2)
+transform = Transform3D(2.381765, 0, 0, 0, 2.381765, 0, 0, 0, 2.381765, 0, 2.519766, 2)
 mesh = SubResource("BoxMesh_4icm7")
 
 [node name="Front" type="MeshInstance3D" parent="Body" unique_id=2081961647]
-transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, -6.0660667)
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 0, 0, -5.9849772)
 mesh = SubResource("PrismMesh_4icm7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1110046145]
