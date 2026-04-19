@@ -7,6 +7,8 @@ extends StaticBody3D
 var dragged = false
 var rotated = false
 
+@export var rotation_speed = 0 # degress per second
+
 @export var type: Globals.LighthouseType = Globals.LighthouseType.ATTRACT:
 	set(new_type):
 		type = new_type
@@ -38,7 +40,7 @@ func update_color():
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
-		
+	
 	if Input.is_action_just_released("click"):
 		dragged = false
 		rotated = false
@@ -49,7 +51,9 @@ func _physics_process(delta: float) -> void:
 
 	if get_tree().paused:
 		return
-		
+	
+	light_pivot.rotate_y(deg_to_rad(rotation_speed) * delta)
+	
 	if detection_area.get_overlapping_bodies():
 		for boat in detection_area.get_overlapping_bodies():
 			boat.steer(self, delta, type)

@@ -1,8 +1,26 @@
 [gd_scene format=3 uid="uid://bqgt1bjuigxcm"]
 
 [ext_resource type="Script" uid="uid://dur685xlhle06" path="res://title.gd" id="1_y7k74"]
+[ext_resource type="PackedScene" uid="uid://clv5nchp7wfnw" path="res://level_commons.tscn" id="2_kpexm"]
+[ext_resource type="ArrayMesh" uid="uid://be2webucffl3j" path="res://levels/islands.tres" id="4_3xoar"]
+[ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="5_0824t"]
+[ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="6_nuqgq"]
+[ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="7_lx2ly"]
 
-[node name="TitleScreen" type="Control" unique_id=818421604]
+[node name="Node3D" type="Node3D" unique_id=35524465]
+
+[node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("2_kpexm")]
+
+[node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
+transform = Transform3D(1, 0, 0, 0, 0.7308774, 0.68250877, 0, -0.68250877, 0.7308774, 0, 194.5678, 133.50256)
+
+[node name="CanvasLayer" parent="LevelCommons" index="3" unique_id=1214671894]
+visible = false
+
+[node name="UI" parent="LevelCommons/CanvasLayer" index="0" unique_id=1493710598]
+process_mode = 4
+
+[node name="TitleScreen" type="Control" parent="." unique_id=818421604]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,22 +29,69 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y7k74")
 
-[node name="Button" type="Button" parent="." unique_id=1566715585]
-layout_mode = 0
-offset_left = 542.0
-offset_top = 293.0
-offset_right = 639.0
-offset_bottom = 324.0
+[node name="Button" type="Button" parent="TitleScreen" unique_id=1566715585]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -35.0
+offset_top = 122.0
+offset_right = 62.0
+offset_bottom = 153.0
+grow_horizontal = 2
 text = "Start game!"
 
-[node name="Label" type="Label" parent="." unique_id=1408699902]
-layout_mode = 0
-offset_left = 264.0
-offset_top = 221.0
-offset_right = 923.0
-offset_bottom = 290.0
-rotation = -0.06956343
+[node name="Label" type="Label" parent="TitleScreen" unique_id=1408699902]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_top = 39.0
+offset_right = 347.0
+offset_bottom = 108.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
-text = "Untitled Lighthouse Game!!"
+text = "Beams of Bermuda"
+horizontal_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[node name="Label2" type="Label" parent="TitleScreen" unique_id=1340736269]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -322.0
+offset_top = -208.0
+offset_right = 337.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.013758661, 0.013758661, 0.013758659, 1)
+theme_override_font_sizes/font_size = 30
+text = "Made in 72 hours
+for Ludum Dare 59
+by nici and blinry"
+horizontal_alignment = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1648162840]
+transform = Transform3D(400, 0, 0, 0, 150, 0, 0, 0, 400, 0, -9.197941, 42.255188)
+mesh = ExtResource("4_3xoar")
+
+[node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_0824t")]
+transform = Transform3D(0.4486016, 0, 0.8937319, 0, 1, 0, -0.8937319, 0, 0.4486016, 235.38918, 11.491058, -5.809841)
+
+[node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("6_nuqgq")]
+transform = Transform3D(0.7759913, 0, 0.63074356, 0, 1, 0, -0.63074356, 0, 0.7759913, 363.14984, 0, -179.96771)
+
+[node name="Ship2" parent="." unique_id=1103857179 instance=ExtResource("6_nuqgq")]
+transform = Transform3D(0.7759913, 0, 0.63074356, 0, 1, 0, -0.63074356, 0, 0.7759913, 432.0685, 0, -185.16614)
+
+[node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("7_lx2ly")]
+transform = Transform3D(0.30458176, 0, -0.9524862, 0, 1, 0, 0.9524862, 0, 0.30458176, -199.3217, 7.062866, -201.76599)
+rotation_speed = 20
+
+[connection signal="pressed" from="TitleScreen/Button" to="TitleScreen" method="_on_start_pressed"]
+
+[editable path="LevelCommons"]
