@@ -73,8 +73,8 @@ func explode():
 		black.albedo_color = Color(0.206, 0.206, 0.206, 1.0)
 		black.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		black.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		for i in 6:
-			$Body.set_surface_override_material(i-1, black)
+		for i in 5:
+			$Body.set_surface_override_material(i, black)
 	
 		$Prop.set_surface_override_material(0, black)
 		crashed = true
