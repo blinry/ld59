@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="2_rbh7r"]
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="3_0fvvq"]
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="4_aaho8"]
+[ext_resource type="Material" uid="uid://cabhkhjkuxawv" path="res://land_material.tres" id="5_c633x"]
 [ext_resource type="Script" uid="uid://ci6gwcloqi3o" path="res://levels/tutorial_ui.gd" id="6_aaho8"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0fvvq"]
+material = ExtResource("5_c633x")
 top_radius = 20.0
 bottom_radius = 20.0
 height = 10.0

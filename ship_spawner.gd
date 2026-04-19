@@ -7,6 +7,7 @@ const SHIP = preload("uid://de42481q0cwhl")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Timer.wait_time = interval
+	$Timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -21,8 +22,9 @@ func _on_timer_timeout() -> void:
 		0.0,
 		randf_range(-extent.z, extent.z)
 	)
-	var global_point = local_point # ???
+	var global_point = local_point + position
 	global_point.y = 0
+	print(global_point)
 	
 	var instance = SHIP.instantiate()
 	add_child(instance)
