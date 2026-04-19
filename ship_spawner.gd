@@ -13,7 +13,17 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	var extent = self.shape.size * 0.5
+
+	var local_point = Vector3(
+		randf_range(-extent.x, extent.x),
+		0.0,
+		randf_range(-extent.z, extent.z)
+	)
+	var global_point = local_point # ???
+	global_point.y = 0
+	
 	var instance = SHIP.instantiate()
-	instance.global_position = Vector3(randf_range(-250,250),0,randf_range(-250,250))
+	instance.global_position = global_point
 	add_child(instance)
 	instance.look_at(Vector3.ZERO)

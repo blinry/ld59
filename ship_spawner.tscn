@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4wctkoqtq64x"]
+
+[ext_resource type="Script" uid="uid://bjvw8y2v1h7s8" path="res://ship_spawner.gd" id="1_kx4cf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_km5ld"]
+resource_local_to_scene = true
+size = Vector3(41.217896, 0, 519.03845)
+
+[node name="ShipSpawner" type="CollisionShape3D" unique_id=225823260]
+shape = SubResource("BoxShape3D_km5ld")
+debug_color = Color(0, 0, 0, 0.7882353)
+script = ExtResource("1_kx4cf")
+
+[node name="Timer" type="Timer" parent="." unique_id=1978538146]
+wait_time = 20.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
