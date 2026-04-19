@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ckxfp2fmjudg8"]
+
+[ext_resource type="Script" uid="uid://cagkxw3vhqxuu" path="res://level.gd" id="1_o6mel"]
+[ext_resource type="PackedScene" uid="uid://clv5nchp7wfnw" path="res://level_commons.tscn" id="2_e7anx"]
+[ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="3_ur00s"]
+[ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="4_wndkh"]
+[ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="5_ly3hx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4n8tn"]
+size = Vector3(100, 10, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkb0e"]
+size = Vector3(100, 10, 100)
+
+[node name="Node3D" type="Node3D" unique_id=2134711930]
+script = ExtResource("1_o6mel")
+
+[node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("2_e7anx")]
+
+[node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
+transform = Transform3D(1, 0, 0, 0, 0.7753194, 0.6315694, 0, -0.6315694, 0.7753194, 184.03596, 312.72836, 288.072)
+
+[node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("3_ur00s")]
+
+[node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("4_wndkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.87946, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=176650454]
+collision_layer = 4
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2042422002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)
+mesh = SubResource("BoxMesh_4n8tn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=369562531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)
+shape = SubResource("BoxShape3D_wkb0e")
+
+[node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_ly3hx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 0, 0)
+
+[editable path="LevelCommons"]
