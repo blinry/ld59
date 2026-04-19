@@ -18,6 +18,14 @@ points = PackedVector3Array(-4.1903, 0.0321666, -0.78506505, 4.1902947, 0.032166
 [sub_resource type="SphereShape3D" id="SphereShape3D_hl5ak"]
 radius = 30.0
 
+[sub_resource type="BoxMesh" id="BoxMesh_krwo4"]
+material = SubResource("StandardMaterial3D_krwo4")
+size = Vector3(20, 20, 20)
+
+[sub_resource type="PrismMesh" id="PrismMesh_krwo4"]
+material = SubResource("StandardMaterial3D_krwo4")
+size = Vector3(20, 5, 20)
+
 [node name="Port" type="StaticBody3D" unique_id=1155637826]
 script = ExtResource("1_krwo4")
 
@@ -34,5 +42,17 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShipDetection" unique_id=572689789]
 shape = SubResource("SphereShape3D_hl5ak")
 debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1679635831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+mesh = SubResource("BoxMesh_krwo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2" unique_id=282339273]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 12.343983, 0)
+mesh = SubResource("PrismMesh_krwo4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1261745823]
+transform = Transform3D(0.20380932, 0, 0, 0, 0.20380932, 0, 0, 0, 0.20380932, -0.21761703, 23.069836, 5.0711374)
+mesh = SubResource("BoxMesh_krwo4")
 
 [connection signal="body_entered" from="ShipDetection" to="." method="_on_ship_detection_body_entered"]

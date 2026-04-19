@@ -38,11 +38,7 @@ func update_color():
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
-
-	if detection_area.get_overlapping_bodies():
-		for boat in detection_area.get_overlapping_bodies():
-			boat.steer(self, delta, type)
-	
+		
 	if Input.is_action_just_released("click"):
 		dragged = false
 		rotated = false
@@ -50,6 +46,13 @@ func _physics_process(delta: float) -> void:
 		global_position = Vector3(Globals.mouse_pos.x, global_position.y, Globals.mouse_pos.z)
 	if rotated:
 		light_pivot.look_at(Vector3(Globals.mouse_pos.x, light_pivot.global_position.y, Globals.mouse_pos.z))
+
+	if get_tree().paused:
+		return
+		
+	if detection_area.get_overlapping_bodies():
+		for boat in detection_area.get_overlapping_bodies():
+			boat.steer(self, delta, type)
 
 func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	var state = get_tree().get_current_scene().state

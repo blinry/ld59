@@ -16,3 +16,5 @@ func enter_state(state):
 	self.state = state
 	if state == Globals.GameState.GAME:
 		get_tree().paused = false
+	if state == Globals.GameState.SETUP:
+		get_tree().paused = true

@@ -11,9 +11,9 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if crashed:
-		global_position.y -= 0.1 * delta
+		global_position.y -= 1 * delta
 		if global_position.y < -5:
 			queue_free()
 
@@ -53,10 +53,12 @@ func explode():
 	if not crashed:
 		print("boom!")
 		speed = 0
+		rotate_z(PI/8)
 		var black = StandardMaterial3D.new()
-		black.albedo_color = Color(0, 0, 0)
+		black.albedo_color = Color(0.206, 0.206, 0.206, 1.0)
 		black.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		black.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		$Body.set_surface_override_material(0, black)
 		$Body/Front.set_surface_override_material(0, black)
+		$Body/Roof.set_surface_override_material(0, black)
 		crashed = true
