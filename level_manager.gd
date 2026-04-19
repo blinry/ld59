@@ -3,8 +3,17 @@ extends Node
 const small_level = preload("uid://ckxfp2fmjudg8")
 const big_level = preload("uid://6uv3yga8ptc2")
 
+const tutorial = preload("uid://vn0buurvd0c6")
+const evergiven = preload("uid://bvyygmmco2f2j")
+const spiral = preload("uid://cfig1wr5luath")
+const bay = preload("uid://d0ytexhnu3x6k")
+
+
 var levels = [
-	small_level,
+	tutorial,
+	spiral,
+	bay,
+	evergiven,
 	big_level,
 ]
 var current_level_id = -1
