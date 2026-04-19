@@ -24,3 +24,8 @@ func _on_start_pressed() -> void:
 		$Button.text = "Start"
 		
 	#$Button.visible = false
+
+
+func _on_reset_pressed() -> void:
+	get_tree().reload_current_scene()
+	Globals.score = 0
