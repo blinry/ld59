@@ -137,6 +137,7 @@ text = "Start!"
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("7_km5ld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 622.9446, 6.406, 6.9815674)
 shape = SubResource("BoxShape3D_km5ld")
+interval = 1
 
 [node name="ShipSpawner4" parent="." unique_id=1902173869 instance=ExtResource("7_km5ld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -451.06738, 6.406, 55.016937)
