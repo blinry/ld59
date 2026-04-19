@@ -34,11 +34,11 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1578370609]
-transform = Transform3D(500, 0, 0, 0, 200, 0, 0, 0, 500, 0, -55.916, 161.44902)
+transform = Transform3D(500, 0, 0, 0, 300, 0, 0, 0, 500, 0, -81.396225, 161.44902)
 mesh = ExtResource("3_mhain")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=926201181]
-transform = Transform3D(500, 0, 0, 0, 200, 0, 0, 0, 500, 0, -55.916, 161.44902)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=693607097]
+transform = Transform3D(500, 0, 0, 0, 300, 0, 0, 0, 500, 0, -81.396225, 161.44902)
 shape = SubResource("ConcavePolygonShape3D_pydu0")
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("4_pbr22")]
