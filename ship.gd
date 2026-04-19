@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-@export var speed: float = 10
-@export_range(0.0,0.5) var rotation_speed: float = 0.005
+@export var speed: float = 10 # meters per second
+@export_range(0.0,360) var rotation_speed: float = 20 # degrees per second
 
 var crashed = false
 
@@ -23,21 +23,27 @@ func _process(delta: float) -> void:
 		explode()
 
 func steer(attractor, delta, type):
-	var relative_away_from_lighthouse =  global_position.direction_to(attractor.global_position).signed_angle_to(transform.basis.z,Vector3.DOWN)
+	var target_angle = 0
 	
-	var relative_target_angle = 0
+	var relative_away_from_lighthouse =  global_position.direction_to(attractor.global_position).signed_angle_to(transform.basis.z,Vector3.DOWN)
+	var away_from_lighthouse = relative_away_from_lighthouse + rotation.y
+	
 	match type:
 		Globals.LighthouseType.ATTRACT:
-			relative_target_angle = relative_away_from_lighthouse + PI
+			target_angle = away_from_lighthouse + PI
 		Globals.LighthouseType.REPEL:
-			relative_target_angle = relative_away_from_lighthouse
+			target_angle = away_from_lighthouse
 		Globals.LighthouseType.TURN_PORT_SIDE:
-			relative_target_angle = PI/2
+			target_angle = rotation.y + PI/2
 		Globals.LighthouseType.TURN_STARBOARD_SIDE:
-			relative_target_angle = -PI/2
+			target_angle = rotation.y - PI/2
+	
+	var current_angle = rotation.y
+	var diff = wrapf(target_angle - current_angle, -PI, PI)
+	var max_rotation_this_frame = delta * deg_to_rad(rotation_speed)
+	var actual_turn = clamp(diff, -max_rotation_this_frame, max_rotation_this_frame)
 
-	#rotate_y(deg_to_rad(max_rotation_speed*delta))
-	rotation.y = lerp_angle(rotation.y, rotation.y + relative_target_angle, rotation_speed)
+	rotation.y += actual_turn
 
 func arrive():
 	Globals.score += 1

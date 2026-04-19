@@ -30,7 +30,10 @@ type = 2
 
 [node name="Lighthouse2" parent="." unique_id=1820272564 instance=ExtResource("1_u52ul")]
 transform = Transform3D(0.9032379, 0, 0.42914015, 0, 1, 0, -0.42914015, 0, 0.9032379, 116.28381, 0, -29.341312)
-type = 2
+
+[node name="Lighthouse4" parent="." unique_id=1779980385 instance=ExtResource("1_u52ul")]
+transform = Transform3D(-0.49099487, 0, -0.8711624, 0, 1, 0, 0.8711624, 0, -0.49099487, 96.14248, 0, -246.60204)
+type = 1
 
 [node name="Lighthouse3" parent="." unique_id=1734996057 instance=ExtResource("1_u52ul")]
 transform = Transform3D(-0.401958, 0, 0.7917543, 0, 0.88794434, 0, -0.7917543, 0, -0.401958, -193.67317, 0, -170.39087)
@@ -38,6 +41,9 @@ type = 3
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("2_vonw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.47802, 6.1035156e-05, -211.86014)
+
+[node name="Ship3" parent="." unique_id=1958634124 instance=ExtResource("2_vonw3")]
+transform = Transform3D(0.33569825, 0, -0.9419696, 0, 1, 0, 0.9419696, 0, 0.33569825, 96.58152, 3.0517578e-05, 161.90512)
 
 [node name="Ship2" parent="." unique_id=2133466668 instance=ExtResource("2_vonw3")]
 transform = Transform3D(0.8433914, 0, -0.53729963, 0, 1, 0, 0.53729963, 0, 0.8433914, 79.07088, -3.0517578e-05, -152.16275)
