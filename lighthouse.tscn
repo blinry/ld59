@@ -1,15 +1,7 @@
 [gd_scene format=3 uid="uid://bib0hns3jxd85"]
 
 [ext_resource type="Script" uid="uid://bppf6tq8be2d5" path="res://lighthouse.gd" id="1_rolx0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdvqr"]
-albedo_color = Color(1, 0.15686275, 0.13725491, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_mdvqr"]
-material = SubResource("StandardMaterial3D_mdvqr")
-top_radius = 6.0
-bottom_radius = 8.0
-height = 20.0
+[ext_resource type="ArrayMesh" uid="uid://cyo5hrwfiwro6" path="res://models/lighthouse_model.tres" id="2_g4l8x"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mdvqr"]
 height = 20.159302
@@ -32,8 +24,8 @@ process_mode = 3
 script = ExtResource("1_rolx0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1426643531]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-mesh = SubResource("CylinderMesh_mdvqr")
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0)
+mesh = ExtResource("2_g4l8x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=27063354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.912781, 0)
@@ -54,7 +46,7 @@ debug_color = Color(0, 1, 0, 0.41960785)
 transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 0, -0.246, -1000)
 mesh = SubResource("PrismMesh_g4l8x")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="input_event" from="." to="." method="_on_lighthouse_input"]
-[connection signal="input_event" from="LightPivot/DetectionArea" to="." method="_on_input_event"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="input_event" from="LightPivot/DetectionArea" to="." method="_on_light_input"]
+[connection signal="input_event" from="LightPivot/DetectionArea" to="." method="_on_input_event"]
