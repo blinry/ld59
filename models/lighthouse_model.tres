@@ -1,4 +1,4 @@
-[gd_resource type="ArrayMesh" format=4 uid="uid://cyo5hrwfiwro6"]
+[gd_resource type="ArrayMesh" format=4 uid="uid://b8ok3wya650gj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhmdc"]
 resource_name = "red"
