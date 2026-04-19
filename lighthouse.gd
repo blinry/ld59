@@ -23,10 +23,16 @@ func _physics_process(delta: float) -> void:
 		for boat in detection_area.get_overlapping_bodies():
 			boat.steer(self, delta, repel)
 	
+	#var state = get_node("..").state
+	var state = get_tree().get_current_scene().state
+	
 	if Input.is_action_just_released("click"):
 		controlled = false
 	if controlled:
-		light_pivot.look_at(Vector3(Globals.mouse_pos.x, light_pivot.global_position.y, Globals.mouse_pos.z))
+		if state == Globals.GameState.SETUP:
+			global_position = Vector3(Globals.mouse_pos.x, global_position.y, Globals.mouse_pos.z)
+		elif state == Globals.GameState.GAME:
+			light_pivot.look_at(Vector3(Globals.mouse_pos.x, light_pivot.global_position.y, Globals.mouse_pos.z))
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event.is_action_pressed("click"):

@@ -1,12 +1,8 @@
-extends Node
+extends Node3D
 
-enum GameState {
-	SETUP,
-	GAME
-}
 
-var mouse_pos: Vector3
-var score: int
+
+var state = Globals.GameState.SETUP
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,3 +12,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func enter_state(state):
+	self.state = state

@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dwd8jdg2oydtv" path="res://port.gd" id="1_krwo4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krwo4"]
+albedo_color = Color(0.38681337, 0.23087677, 0.7158771, 1)
+
 [sub_resource type="TorusMesh" id="TorusMesh_1f70d"]
+material = SubResource("StandardMaterial3D_krwo4")
 inner_radius = 4.538
 outer_radius = 10.0
 rings = 32
