@@ -3,6 +3,7 @@ extends CharacterBody3D
 @export var speed: float = 10 # meters per second
 @export_range(0.0,360) var rotation_speed: float = 20 # degrees per second
 @onready var fire_particles: CPUParticles3D = %FireParticles
+@onready var smoke_particles: CPUParticles3D = %SmokeParticles
 
 var crashed = false
 
@@ -14,7 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if crashed:
-		global_position.y -= 1 * delta
+		global_position.y -= 2 * delta
 		if global_position.y < -5:
 			queue_free()
 
@@ -54,6 +55,8 @@ func arrive():
 func explode():
 	if not crashed:
 		fire_particles.emitting = true
+		smoke_particles.emitting = false
+		$CrashParticleTimer.start()
 		print("boom!")
 		speed = 0
 		rotate_z(PI/8)
@@ -66,3 +69,7 @@ func explode():
 		$Body/Roof.set_surface_override_material(0, black)
 		$Body/Chimney.set_surface_override_material(0, black)
 		crashed = true
+
+
+func _on_crash_particle_timer_timeout() -> void:
+	fire_particles.emitting = false

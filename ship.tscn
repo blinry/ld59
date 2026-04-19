@@ -114,3 +114,9 @@ scale_amount_max = 10.0
 scale_amount_curve = SubResource("Curve_4cq66")
 anim_speed_min = 5.0
 anim_speed_max = 5.0
+
+[node name="CrashParticleTimer" type="Timer" parent="." unique_id=1621227323]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="timeout" from="CrashParticleTimer" to="." method="_on_crash_particle_timer_timeout"]
