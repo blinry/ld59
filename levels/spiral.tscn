@@ -13,11 +13,11 @@ data = PackedVector3Array(-0.98429996, 0, 1, -1, 0, 0.9842, -0.98429996, 0, 0.98
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pydu0"]
 resource_local_to_scene = true
-size = Vector3(122.70705, 0, 233.0375)
+size = Vector3(60.628056, 0, 77.97725)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s10hb"]
 resource_local_to_scene = true
-size = Vector3(115.547005, 0, 233.0375)
+size = Vector3(50.062565, 0.001, 59.664284)
 
 [node name="Spiral" type="Node3D" unique_id=1799382022]
 script = ExtResource("1_frq50")
@@ -26,7 +26,7 @@ script = ExtResource("1_frq50")
 ships_needed = 8
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 259.82098, 148.92854)
+transform = Transform3D(1, 0, 0, 0, 0.53687257, 0.8436633, 0, -0.8436633, 0.53687257, 0, 239.9402, 292.88507)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1304108046]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 94.9668)
@@ -51,15 +51,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.31001, -9.1552734e-05, 18
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 228.6915, 0, 248.45085)
 
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("6_pydu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -475.84753, 29.607727, 21.704494)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -426.44366, 29.607727, 36.600792)
 shape = SubResource("BoxShape3D_pydu0")
 
 [node name="ShipSpawner2" parent="." unique_id=918299845 instance=ExtResource("6_pydu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 437.5519, 14.992889, 25.852127)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 404.8097, 14.993389, 18.914661)
 shape = SubResource("BoxShape3D_s10hb")
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("7_pydu0")]
-transform = Transform3D(0.3245613, 0, -0.9458647, 0, 1, 0, 0.9458647, 0, 0.3245613, -235.62321, 0, 85.59549)
+transform = Transform3D(0.3245613, 0, -0.9458647, 0, 1, 0, 0.9458647, 0, 0.3245613, -75.24535, 0, 67.96188)
 
 [node name="Ship2" parent="." unique_id=961471870 instance=ExtResource("7_pydu0")]
 transform = Transform3D(0.28165495, 0, 0.9595158, 0, 1, 0, -0.9595158, 0, 0.28165495, 286.22543, 0, 66.283066)

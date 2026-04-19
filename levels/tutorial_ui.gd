@@ -12,4 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_level_unpaused() -> void:
-	$Label.text = "Game phase:\n\nDrag the light cones!\n\nSteer enough ships close to the houses to win."
+	$Label.text = "In the game phase, drag the light cones.
+
+Ships will go towards yellow light.
+
+Guide 3 ships to the house!"

@@ -16,3 +16,8 @@ func _process(delta: float) -> void:
 
 func _on_ui_unpaused() -> void:
 	unpaused.emit()
+
+func _input(event):
+	if event.is_action_pressed("cheat"):
+		Globals.score = 999
+		LevelManager.check_win_condition()

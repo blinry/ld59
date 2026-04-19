@@ -11,8 +11,8 @@ const bay = preload("uid://d0ytexhnu3x6k")
 
 var levels = [
 	tutorial,
-	spiral,
 	bay,
+	spiral,
 	evergiven,
 	big_level,
 ]

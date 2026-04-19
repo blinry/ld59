@@ -36,7 +36,7 @@ transform = Transform3D(-0.48810345, 0, -0.8727858, 0, 1, 0, 0.8727858, 0, -0.48
 transform = Transform3D(-0.6196557, 0, 0.7848737, 0, 1, 0, -0.7848737, 0, -0.6196557, 286.78317, 0, 7.19841)
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5495, 0, 0.8865509)
+transform = Transform3D(0.95957965, 0, 0.28143722, 0, 1, 0, -0.28143722, 0, 0.95957965, 171.16167, 1.5258789e-05, 93.5638)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=70155308]
 collision_layer = 4
@@ -64,15 +64,15 @@ script = ExtResource("6_aaho8")
 
 [node name="Label" type="Label" parent="CanvasLayer/TutorialUI" unique_id=1437113812]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 19.0
-offset_right = 131.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 30
-text = "Setup phase:
+offset_left = 42.0
+offset_top = 353.0
+offset_right = 474.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 25
+text = "In the setup phase, you can
+drag the light houses around!
 
-Drag the light houses around!
-Yellow light will attract ships.
+Place this one next to the house.
 
 Then, click \"Start!\""
 
