@@ -28,10 +28,3 @@ func _on_start_pressed() -> void:
 func _on_reset_pressed() -> void:
 	get_tree().reload_current_scene()
 	Globals.score = 0
-
-
-func _on_fullscreen_pressed() -> void:
-	if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_FULLSCREEN:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED) 
