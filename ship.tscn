@@ -178,14 +178,14 @@ spot_angle = 32.895794
 transform = Transform3D(-4.371139e-08, 0.5927585, -0.80538034, 0, 0.80538034, 0.5927585, 1, 2.5910296e-08, -3.5204295e-08, 0, 12.119156, 4.38645)
 light_color = Color(1, 0.9166666, 0, 1)
 light_energy = 50.0
-spot_range = 49.978012
+spot_range = 29.420904
 spot_angle = 37.292473
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1543143507]
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1822608223]
 transform = Transform3D(1.3113416e-07, -0.5927585, 0.80538034, -3.0790577e-15, 0.80538034, 0.5927585, -1, -7.773089e-08, 1.05612884e-07, 0, 12.119156, 4.38645)
 light_color = Color(1, 0.9166666, 0, 1)
 light_energy = 50.0
-spot_range = 49.978012
+spot_range = 29.420904
 spot_angle = 37.292473
 
 [connection signal="timeout" from="CrashParticleTimer" to="." method="_on_crash_particle_timer_timeout"]
