@@ -49,11 +49,14 @@ func steer(attractor, delta, type):
 			target_angle = rotation.y - PI/2
 	
 	var current_angle = rotation.y
-	var diff = wrapf(target_angle - current_angle, -PI, PI)
-	var max_rotation_this_frame = delta * deg_to_rad(rotation_speed)
-	var actual_turn = clamp(diff, -max_rotation_this_frame, max_rotation_this_frame)
+	#var diff = wrapf(target_angle - current_angle, -PI, PI)
+	rotation.y = lerp_angle(current_angle, target_angle, 0.005)
+	#diff = pow(diff, 1.5)
+	
+	#var max_rotation_this_frame = delta * deg_to_rad(rotation_speed)
+	#var actual_turn = clamp(diff, -max_rotation_this_frame, max_rotation_this_frame)
 
-	rotation.y += actual_turn
+	#rotation.y += actual_turn
 
 func arrive():
 	Globals.score += 1
