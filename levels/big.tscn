@@ -65,17 +65,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.930145, 13.406042, 198.67
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("5_ic6it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 667.7258, 6.406, 6.9815674)
 shape = SubResource("BoxShape3D_4rha3")
-interval = 25
+interval = 30
 
 [node name="ShipSpawner4" parent="." unique_id=1902173869 instance=ExtResource("5_ic6it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -538.61194, 6.406, 55.016937)
 shape = SubResource("BoxShape3D_6pbnt")
-interval = 25
+interval = 40
 
 [node name="ShipSpawner2" parent="." unique_id=1321491666 instance=ExtResource("5_ic6it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 412.5617, 6.406, 481.11755)
 shape = SubResource("BoxShape3D_4556n")
-interval = 25
+interval = 30
 
 [node name="ShipSpawner3" parent="." unique_id=1793858131 instance=ExtResource("5_ic6it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.971085, 6.406, -434.1819)
