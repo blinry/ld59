@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://brt1g2cwxggb"]
+
+[ext_resource type="FontFile" uid="uid://bskvswf8qjf2f" path="res://fonts/trade-winds.ttf" id="1_e1x85"]
+
+[resource]
+default_font = ExtResource("1_e1x85")
+default_font_size = 25

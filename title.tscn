@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bqgt1bjuigxcm"]
 
 [ext_resource type="Script" uid="uid://dur685xlhle06" path="res://title.gd" id="1_y7k74"]
+[ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="2_0824t"]
 [ext_resource type="PackedScene" uid="uid://clv5nchp7wfnw" path="res://level_commons.tscn" id="2_kpexm"]
 [ext_resource type="ArrayMesh" uid="uid://be2webucffl3j" path="res://levels/islands.tres" id="4_3xoar"]
+[ext_resource type="FontFile" uid="uid://bskvswf8qjf2f" path="res://fonts/trade-winds.ttf" id="4_nuqgq"]
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="5_0824t"]
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="6_nuqgq"]
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="7_lx2ly"]
@@ -28,6 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("2_0824t")
 script = ExtResource("1_y7k74")
 
 [node name="Button" type="Button" parent="TitleScreen" unique_id=1566715585]
@@ -35,11 +38,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -35.0
-offset_top = 122.0
-offset_right = 62.0
-offset_bottom = 153.0
+offset_left = -165.0
+offset_top = 181.0
+offset_right = 169.0
+offset_bottom = 262.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
 text = "Start game!"
 
 [node name="Label" type="Label" parent="TitleScreen" unique_id=1408699902]
@@ -47,12 +51,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -312.0
-offset_top = 39.0
-offset_right = 347.0
-offset_bottom = 108.0
+offset_left = -382.0
+offset_top = 48.0
+offset_right = 376.0
+offset_bottom = 165.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("4_nuqgq")
+theme_override_font_sizes/font_size = 80
 text = "Beams of Bermuda"
 horizontal_alignment = 1
 
@@ -63,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -322.0
-offset_top = -208.0
-offset_right = 337.0
-offset_bottom = -76.0
+offset_left = -327.0
+offset_top = -196.0
+offset_right = 332.0
+offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)

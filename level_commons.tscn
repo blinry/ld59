@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://yen87dao27qd" path="res://camera.gd" id="1_vvcku"]
 [ext_resource type="Script" uid="uid://d3lle2ci74u0x" path="res://ui.gd" id="2_8auud"]
 [ext_resource type="Material" uid="uid://cx2femey0lg3x" path="res://water_material.tres" id="3_8t037"]
+[ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="4_5lxma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vonw3"]
 albedo_color = Color(0, 0.30980393, 1, 1)
@@ -57,6 +58,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("4_5lxma")
 script = ExtResource("2_8auud")
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer/UI" unique_id=908436513]
@@ -80,12 +82,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -25.0
-offset_top = -67.0
-offset_right = 26.0
-offset_bottom = -36.0
+offset_left = -87.0
+offset_top = -115.0
+offset_right = 92.5
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 50
 text = "Start!"
 
 [node name="Reset" type="Button" parent="CanvasLayer/UI" unique_id=2089104040]

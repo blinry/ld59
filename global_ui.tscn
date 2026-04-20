@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dekdovu6l8gui"]
 
 [ext_resource type="Script" uid="uid://7ypqx1hoxl7n" path="res://global_ui.gd" id="1_b2grt"]
+[ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="1_r5ibi"]
 [ext_resource type="AudioStream" uid="uid://b5gtmsa5eglad" path="res://audio/ossuary-1.mp3" id="2_22env"]
+[ext_resource type="Texture2D" uid="uid://deqi8vh6atw8d" path="res://icons/fullscreen.svg" id="3_gjitu"]
 
 [node name="GlobalUI" type="Control" unique_id=1611394329]
 layout_mode = 3
@@ -11,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_r5ibi")
 script = ExtResource("1_b2grt")
 
 [node name="Button2" type="Button" parent="." unique_id=1475574839]
@@ -20,13 +23,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -118.0
-offset_top = -63.0
+offset_left = -78.0
+offset_top = -82.0
 offset_right = -31.0
 offset_bottom = -32.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Fullscreen"
+icon = ExtResource("3_gjitu")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=385797192]
 process_mode = 3

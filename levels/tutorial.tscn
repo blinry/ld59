@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="4_aaho8"]
 [ext_resource type="Material" uid="uid://cabhkhjkuxawv" path="res://land_material.tres" id="5_c633x"]
 [ext_resource type="Script" uid="uid://ci6gwcloqi3o" path="res://levels/tutorial_ui.gd" id="6_aaho8"]
+[ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="7_gdrka"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0fvvq"]
 material = ExtResource("5_c633x")
@@ -60,14 +61,15 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("7_gdrka")
 script = ExtResource("6_aaho8")
 
 [node name="Label" type="Label" parent="CanvasLayer/TutorialUI" unique_id=1437113812]
 layout_mode = 0
 offset_left = 42.0
-offset_top = 353.0
+offset_top = 302.0
 offset_right = 474.0
-offset_bottom = 620.0
+offset_bottom = 569.0
 theme_override_font_sizes/font_size = 25
 text = "In the setup phase, you can
 drag the light houses around!
