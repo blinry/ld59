@@ -46,14 +46,14 @@ func _physics_process(delta: float) -> void:
 			$Drop.play()
 		dragged = false
 		rotated = false
-		$Ray.stop()
+		$Ray.stream_paused = true
 	if dragged:
 		global_position = Vector3(Globals.mouse_pos.x, global_position.y, Globals.mouse_pos.z)
 	if rotated:
 		var prev = light_pivot.rotation.y
 		light_pivot.look_at(Vector3(Globals.mouse_pos.x, light_pivot.global_position.y, Globals.mouse_pos.z))
 		if light_pivot.rotation.y == prev:
-			$Ray.stop()
+			$Ray.stream_paused = true
 		else:
 			if not $Ray.playing:
 				$Ray.play()
