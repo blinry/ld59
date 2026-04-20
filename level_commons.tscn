@@ -13,7 +13,7 @@ albedo_color = Color(0, 0.30980393, 1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi3di"]
 material = SubResource("StandardMaterial3D_vonw3")
-size = Vector2(10000, 10000)
+size = Vector2(5000, 5000)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_0b4ue"]
 

@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://be2webucffl3j" path="res://levels/islands.tres" id="4_3xoar"]
 [ext_resource type="FontFile" uid="uid://bskvswf8qjf2f" path="res://fonts/trade-winds.ttf" id="4_nuqgq"]
 [ext_resource type="PackedScene" uid="uid://bc2hehfyao4yn" path="res://port.tscn" id="5_0824t"]
+[ext_resource type="Material" uid="uid://cabhkhjkuxawv" path="res://land_material.tres" id="6_lx2ly"]
 [ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="6_nuqgq"]
 [ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="7_lx2ly"]
 
@@ -131,6 +132,7 @@ horizontal_alignment = 1
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1648162840]
 transform = Transform3D(400, 0, 0, 0, 150, 0, 0, 0, 400, 0, -9.197941, 42.255188)
 mesh = ExtResource("4_3xoar")
+surface_material_override/0 = ExtResource("6_lx2ly")
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_0824t")]
 transform = Transform3D(0.4486016, 0, 0.8937319, 0, 1, 0, -0.8937319, 0, 0.4486016, 235.38918, 11.491058, -5.809841)
@@ -144,6 +146,7 @@ transform = Transform3D(0.7759913, 0, 0.63074356, 0, 1, 0, -0.63074356, 0, 0.775
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("7_lx2ly")]
 transform = Transform3D(0.30458176, 0, -0.9524862, 0, 1, 0, 0.9524862, 0, 0.30458176, -199.3217, 7.062866, -201.76599)
 rotation_speed = 20
+type = 0
 
 [connection signal="pressed" from="TitleScreen/Button" to="TitleScreen" method="_on_start_pressed"]
 
