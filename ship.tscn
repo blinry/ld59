@@ -163,4 +163,8 @@ stream = ExtResource("6_xpsff")
 volume_db = 42.264
 unit_size = 100.0
 
+[node name="DespawnTimer" type="Timer" parent="." unique_id=1037435070]
+wait_time = 10.0
+
 [connection signal="timeout" from="CrashParticleTimer" to="." method="_on_crash_particle_timer_timeout"]
+[connection signal="timeout" from="DespawnTimer" to="." method="_on_despawn_timer_timeout"]

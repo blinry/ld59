@@ -83,7 +83,14 @@ func explode():
 		crashed = true
 		$Explode.play()
 		Globals.explosions += 1
+		$DespawnTimer.start()
+
+
 
 func _on_crash_particle_timer_timeout() -> void:
 	fire_particles.emitting = false
 	fire_light.visible = false
+
+
+func _on_despawn_timer_timeout() -> void:
+	queue_free()
