@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bb81jeiya1ixc" path="res://audio/explode.mp3" id="6_xpsff"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l3rv8"]
-size = Vector3(9.791565, 49.14258, 22.644941)
+size = Vector3(9.791565, 47.878906, 22.644941)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3vuw"]
 transparency = 1
@@ -96,7 +96,7 @@ transform = Transform3D(5, 0, 0, 0, -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 2.9
 mesh = ExtResource("3_xpsff")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1110046145]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091156006, 25.42871, 5.5681887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091156006, 26.060547, 5.5681887)
 shape = SubResource("BoxShape3D_l3rv8")
 
 [node name="SmokeParticles" type="CPUParticles3D" parent="." unique_id=1924222923]

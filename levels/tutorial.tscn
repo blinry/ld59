@@ -26,19 +26,19 @@ script = ExtResource("1_0fvvq")
 description = ""
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
-transform = Transform3D(1, 0, 0, 0, 0.7177132, 0.6963389, 0, -0.6963389, 0.7177132, 70.140045, 121.2437, 139.27884)
+transform = Transform3D(1, 0, 0, 0, 0.23397136, 0.97224355, 0, -0.97224355, 0.23397136, 71.615906, 235.61221, 51.290863)
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("2_rbh7r")]
-transform = Transform3D(0.65430534, 0, -0.7562305, 0, 1, 0, 0.7562305, 0, 0.65430534, -81.9003, 0, -27.089066)
+transform = Transform3D(-0.0220069, 0, 0.9997578, 0, 1, 0, -0.9997578, 0, -0.0220069, 203.23865, 0, 109.0553)
 
 [node name="Ship3" parent="." unique_id=1667829318 instance=ExtResource("2_rbh7r")]
-transform = Transform3D(-0.2227226, 0, -0.9748819, 0, 1, 0, 0.9748819, 0, -0.2227226, 28.690071, -7.6293945e-06, 39.902412)
+transform = Transform3D(-0.2227226, 0, -0.9748819, 0, 1, 0, 0.9748819, 0, -0.2227226, -36.75161, -7.6293945e-06, 66.502495)
 
 [node name="Ship2" parent="." unique_id=186411588 instance=ExtResource("2_rbh7r")]
-transform = Transform3D(-0.47567028, 0, -0.87962365, 0, 1, 0, 0.87962365, 0, -0.47567028, 159.52303, 0, -69.7108)
+transform = Transform3D(0.56403047, 0, -0.8257539, 0, 1, 0, 0.8257539, 0, 0.56403047, 136.04332, 1.5258789e-05, -25.840546)
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
-transform = Transform3D(0.95957965, 0, 0.28143722, 0, 1, 0, -0.28143722, 0, 0.95957965, 171.16167, 1.5258789e-05, 93.5638)
+transform = Transform3D(-0.5945702, 0, -0.80404377, 0, 1, 0, 0.80404377, 0, -0.5945702, 69.70651, 0, -157.32768)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=70155308]
 collision_layer = 4
@@ -67,14 +67,14 @@ script = ExtResource("6_aaho8")
 
 [node name="Label" type="Label" parent="CanvasLayer/TutorialUI" unique_id=1437113812]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 302.0
-offset_right = 474.0
-offset_bottom = 569.0
+offset_left = 39.0
+offset_top = 40.0
+offset_right = 471.0
+offset_bottom = 317.0
 theme_override_font_sizes/font_size = 25
-text = "In the setup phase, you can
-drag the light houses around!
+text = "All levels have two phases:
 
+First, drag the light houses around!
 Place this one next to the house.
 
 Then, click \"Start!\""

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 10 # meters per second
+@export var speed: float = 20 # meters per second
 @export_range(0.0,360) var rotation_speed: float = 20 # degrees per second
 @onready var fire_particles: CPUParticles3D = %FireParticles
 @onready var smoke_particles: CPUParticles3D = %SmokeParticles

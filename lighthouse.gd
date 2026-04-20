@@ -22,7 +22,7 @@ func update_color():
 	var color
 	match type:
 		Globals.LighthouseType.REPEL:
-			color = Color(0.583, 0.031, 0.467, 0.5)
+			color = Color(0.8, 0.12, 0.154, 0.502)
 		Globals.LighthouseType.TURN_PORT_SIDE:
 			color = Color(1, 0.2, 0.2, 0.5)
 		Globals.LighthouseType.TURN_STARBOARD_SIDE:
@@ -62,6 +62,8 @@ func _physics_process(delta: float) -> void:
 			boat.steer(self, delta, type)
 
 func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if not "state" in get_tree().get_current_scene():
+		return
 	var state = get_tree().get_current_scene().state
 	if state != Globals.GameState.SETUP:
 		return

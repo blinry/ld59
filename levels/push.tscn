@@ -27,7 +27,7 @@ script = ExtResource("1_0ob7o")
 ships_needed = 6
 description = "The International Lighthouse
 Association just introduced a
-new light color:
+new light color: RED!
 
 If ships see red, they will
 steer *away* from it!"
@@ -51,10 +51,12 @@ shape = SubResource("ConcavePolygonShape3D_0ob7o")
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("4_32636")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.654167, 31.69989, 196.08249)
 shape = SubResource("BoxShape3D_ffvuu")
+interval = 15
 
 [node name="ShipSpawner2" parent="." unique_id=174740086 instance=ExtResource("4_32636")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2916, 31.69989, -251.52716)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.266972, 31.69989, -316.43)
 shape = SubResource("BoxShape3D_32636")
+interval = 15
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_2mjin")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.702, 0, 4.8269043)
