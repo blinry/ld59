@@ -81,6 +81,7 @@ func explode():
 	
 		$Prop.set_surface_override_material(0, black)
 		crashed = true
+		$Explode.pitch_scale = randf_range(0.8, 1.0)
 		$Explode.play()
 		Globals.explosions += 1
 		$DespawnTimer.start()
