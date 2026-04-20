@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://cx2femey0lg3x" path="res://water_material.tres" id="3_8t037"]
 [ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="4_5lxma"]
 [ext_resource type="AudioStream" uid="uid://dw6o62fkgw0l6" path="res://audio/reset.mp3" id="6_dfl7q"]
+[ext_resource type="PackedScene" uid="uid://dbr0fx0xv8gs0" path="res://nebel.tscn" id="7_83c26"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vonw3"]
 albedo_color = Color(0, 0.30980393, 1, 1)
@@ -129,6 +130,9 @@ volume_db = 16.445
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1373188819]
 environment = SubResource("Environment_dfl7q")
+
+[node name="Nebel" parent="." unique_id=1920904504 instance=ExtResource("7_83c26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
 
 [connection signal="unpaused" from="CanvasLayer/UI" to="." method="_on_ui_unpaused"]
 [connection signal="pressed" from="CanvasLayer/UI/StartButton" to="CanvasLayer/UI" method="_on_start_pressed"]

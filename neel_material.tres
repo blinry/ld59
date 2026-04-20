@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://g1mrffkhjqlb"]
+
+[ext_resource type="Shader" uid="uid://catcvbt8cvlfn" path="res://nebel_shader.gdshader" id="1_jt21j"]
+
+[sub_resource type="Gradient" id="Gradient_162vs"]
+offsets = PackedFloat32Array(0.4710145, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_axt11"]
+frequency = 0.0154
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gbtju"]
+noise = SubResource("FastNoiseLite_axt11")
+color_ramp = SubResource("Gradient_162vs")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_rmhw0"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ieqw4"]
+gradient = SubResource("Gradient_rmhw0")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_jt21j")
+shader_parameter/noise1 = SubResource("NoiseTexture2D_gbtju")
+shader_parameter/noise2 = SubResource("GradientTexture1D_ieqw4")
+shader_parameter/black = Color(0, 0, 0, 1)
+shader_parameter/timescale = 0.0010000000475
