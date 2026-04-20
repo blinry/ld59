@@ -4,20 +4,25 @@
 [ext_resource type="ArrayMesh" uid="uid://b8ok3wya650gj" path="res://models/lighthouse_model.tres" id="2_g4l8x"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mdvqr"]
-height = 20.159302
+height = 56.851624
 radius = 17.520508
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rolx0"]
-points = PackedVector3Array(0, 0, 0, 150, 0, -2000, -150, 0, -2000)
+points = PackedVector3Array(0, 0, 0, 0, -30, 0, 150, 0, -2000, -150, 0, -2000, 150, -30, -2000, -150, -30, -2000)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rolx0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4l8x"]
 transparency = 1
 shading_mode = 0
-albedo_color = Color(1, 1, 0.21176471, 0.4392157)
+albedo_color = Color(0.63, 0.62075996, 0.075600006, 0.49019608)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pbmx5"]
+material = SubResource("StandardMaterial3D_g4l8x")
+bottom_radius = 150.0
+height = 2000.0
 
 [sub_resource type="PrismMesh" id="PrismMesh_g4l8x"]
-material = SubResource("StandardMaterial3D_rolx0")
-size = Vector3(300, 2000, 0.118)
+material = SubResource("StandardMaterial3D_g4l8x")
+size = Vector3(300, 2000, 30)
 
 [node name="Lighthouse" type="StaticBody3D" unique_id=1820272564]
 process_mode = 3
@@ -28,11 +33,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0)
 mesh = ExtResource("2_g4l8x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=27063354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.912781, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.258942, 0)
 shape = SubResource("CylinderShape3D_mdvqr")
 
 [node name="LightPivot" type="Node3D" parent="." unique_id=1436704699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.241016, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.58354, 0)
 
 [node name="DetectionArea" type="Area3D" parent="LightPivot" unique_id=334734820]
 unique_name_in_owner = true
@@ -43,7 +48,12 @@ shape = SubResource("ConvexPolygonShape3D_rolx0")
 debug_color = Color(0, 1, 0, 0.41960785)
 
 [node name="LightCone" type="MeshInstance3D" parent="LightPivot" unique_id=2143301765]
-transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 0, -0.246, -1000)
+transform = Transform3D(-1, -2.3705553e-07, 3.0755242e-08, -1.5000825e-08, 0.12761866, 1.9836466, -2.3707966e-07, 0.9918233, -0.2552373, 0, -125.88, -992.014)
+mesh = SubResource("CylinderMesh_pbmx5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LightPivot" unique_id=487330392]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -13.083, -1000)
+visible = false
 mesh = SubResource("PrismMesh_g4l8x")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

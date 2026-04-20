@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dj1kpv8xykp6" path="res://textures/smoke/smoke_particle1-sheet.png" id="2_4cq66"]
 [ext_resource type="ArrayMesh" uid="uid://djm0bdijavclo" path="res://models/shippy.res" id="2_78o8j"]
 [ext_resource type="Texture2D" uid="uid://b68kn8iqilviy" path="res://textures/explosion/explosion1-sheet.png" id="3_v4325"]
-[ext_resource type="ArrayMesh" uid="uid://fv076so3v218" path="res://models/prop.res" id="3_xpsff"]
+[ext_resource type="ArrayMesh" uid="uid://drad7581o4igu" path="res://models/prop.res" id="3_xpsff"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l3rv8"]
-size = Vector3(11.930908, 50, 25.995468)
+size = Vector3(9.791565, 49.14258, 22.644941)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3vuw"]
 transparency = 1
@@ -95,7 +95,7 @@ transform = Transform3D(5, 0, 0, 0, -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 2.9
 mesh = ExtResource("3_xpsff")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1110046145]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046020508, 25, 0.707222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091156006, 25.42871, 5.5681887)
 shape = SubResource("BoxShape3D_l3rv8")
 
 [node name="SmokeParticles" type="CPUParticles3D" parent="." unique_id=1924222923]
