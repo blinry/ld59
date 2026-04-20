@@ -79,16 +79,16 @@ visible = false
 process_mode = 4
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("4_h30m1")]
-transform = Transform3D(0.4486016, 0, 0.8937319, 0, 1, 0, -0.8937319, 0, 0.4486016, 235.38918, 11.491058, -5.809841)
+transform = Transform3D(-0.08127758, 0, 0.9966915, 0, 1, 0, -0.9966915, 0, -0.08127758, 55.916687, 11.491043, -30.802631)
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("5_3mii5")]
 transform = Transform3D(0.58303076, 0, 0.8124501, 0, 1, 0, -0.8124501, 0, 0.58303076, -118.67706, 0, -97.67421)
 
 [node name="Ship3" parent="." unique_id=1342138454 instance=ExtResource("5_3mii5")]
-transform = Transform3D(0.6761433, 0, 0.73677015, 0, 1, 0, -0.73677015, 0, 0.6761433, -94.12631, 2.4326096, -126.80408)
+transform = Transform3D(0.7585894, 0, 0.65156907, 0, 1, 0, -0.65156907, 0, 0.7585894, -94.12631, 2.4326096, -126.80408)
 
 [node name="Ship7" parent="." unique_id=1853284945 instance=ExtResource("5_3mii5")]
-transform = Transform3D(0.99975586, 0, 0.022094086, 0, 1, 0, -0.022094086, 0, 0.99975586, -12.427943, 0, -159.69574)
+transform = Transform3D(0.99483114, 0, -0.10154246, 0, 1, 0, 0.10154246, 0, 0.99483114, -7.297412, 1.5258789e-05, -158.61768)
 
 [node name="Ship4" parent="." unique_id=581908891 instance=ExtResource("5_3mii5")]
 transform = Transform3D(0.973567, 0, 0.22840202, 0, 1, 0, -0.22840202, 0, 0.973567, -56.78972, -3.0517578e-05, -153.65779)
@@ -97,7 +97,7 @@ transform = Transform3D(0.973567, 0, 0.22840202, 0, 1, 0, -0.22840202, 0, 0.9735
 transform = Transform3D(0.9238463, 0, -0.3827641, 0, 1, 0, 0.3827641, 0, 0.9238463, 37.006382, -3.0517578e-05, -147.33694)
 
 [node name="Ship6" parent="." unique_id=1314549483 instance=ExtResource("5_3mii5")]
-transform = Transform3D(0.7742161, 0, -0.6329216, 0, 1, 0, 0.6329216, 0, 0.7742161, 76.122055, -3.0517578e-05, -126.08244)
+transform = Transform3D(0.704176, 0, -0.71002567, 0, 1, 0, 0.71002567, 0, 0.704176, 76.122055, -3.0517578e-05, -126.08244)
 
 [node name="Ship2" parent="." unique_id=645883669 instance=ExtResource("5_3mii5")]
 transform = Transform3D(0.4792434, 0, -0.8776822, 0, 1, 0, 0.8776822, 0, 0.4792434, 94.26631, 0, -96.459045)
