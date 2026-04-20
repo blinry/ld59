@@ -23,6 +23,7 @@ radius = 19.73877
 script = ExtResource("1_0fvvq")
 
 [node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("1_khcq3")]
+description = ""
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
 transform = Transform3D(1, 0, 0, 0, 0.7177132, 0.6963389, 0, -0.6963389, 0.7177132, 70.140045, 121.2437, 139.27884)

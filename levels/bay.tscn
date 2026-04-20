@@ -21,6 +21,12 @@ script = ExtResource("1_mh2xa")
 
 [node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("1_cjkbc")]
 ships_needed = 5
+description = "The citizens in this bay are
+awaiting an urgent food delivery!
+
+Don't forget to place your
+lighthouses in a way that
+seems useful to help with that."
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 0, 1, 1, 4.371139e-08, -4.3711385e-08, 1.646773e-05, 537.821, -358.83972)

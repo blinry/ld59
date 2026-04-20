@@ -3,7 +3,7 @@ extends Node3D
 signal unpaused
 
 @export var ships_needed = 3
-@export var description = "test!"
+@export_multiline var description = "test!"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

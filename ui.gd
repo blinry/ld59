@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	score_label.text = str(Globals.score) + "/" + str(get_tree().get_current_scene().get_commons().ships_needed)
+	score_label.text = "Ships: " + str(Globals.score) + "/" + str(get_tree().get_current_scene().get_commons().ships_needed)
 
 
 func _on_start_pressed() -> void:
