@@ -34,7 +34,7 @@ transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 0, 1, 1, 4.371139e-08
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("3_0r7y0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.66925, 20.986969, -1154.0267)
 shape = SubResource("BoxShape3D_lvi27")
-interval = 10
+interval = 15
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("4_0r7y0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.016266, 0, -105.470184)

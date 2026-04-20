@@ -21,7 +21,7 @@ size = Vector3(41.217896, 0, 615.1092)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4556n"]
 resource_local_to_scene = true
-size = Vector3(672.4016, 0, 35.0419)
+size = Vector3(191.47534, 0, 35.0419)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e8qap"]
 resource_local_to_scene = true
@@ -63,20 +63,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.722626, 13.406042, 71.908
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.930145, 13.406042, 198.67566)
 
 [node name="ShipSpawner" parent="." unique_id=225823260 instance=ExtResource("5_ic6it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 622.9446, 6.406, 6.9815674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 667.7258, 6.406, 6.9815674)
 shape = SubResource("BoxShape3D_4rha3")
+interval = 25
 
 [node name="ShipSpawner4" parent="." unique_id=1902173869 instance=ExtResource("5_ic6it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -451.06738, 6.406, 55.016937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -538.61194, 6.406, 55.016937)
 shape = SubResource("BoxShape3D_6pbnt")
+interval = 25
 
 [node name="ShipSpawner2" parent="." unique_id=1321491666 instance=ExtResource("5_ic6it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 172.09857, 6.406, 481.11755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 412.5617, 6.406, 481.11755)
 shape = SubResource("BoxShape3D_4556n")
+interval = 25
 
 [node name="ShipSpawner3" parent="." unique_id=1793858131 instance=ExtResource("5_ic6it")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.971085, 6.406, -434.1819)
 shape = SubResource("BoxShape3D_e8qap")
+interval = 25
 
 [node name="Ship" parent="." unique_id=422053590 instance=ExtResource("6_56mqa")]
 transform = Transform3D(0.97537315, 0, -0.22056125, 0, 1, 0, 0.22056125, 0, 0.97537315, -46.117996, 10.599945, 465.06827)

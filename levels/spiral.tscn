@@ -56,7 +56,7 @@ transform = Transform3D(-0.9352712, 0, 0.35393202, 0, 1, 0, -0.35393202, 0, -0.9
 [node name="ShipSpawner2" parent="." unique_id=918299845 instance=ExtResource("6_pydu0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 464.4361, 14.993389, -102.58405)
 shape = SubResource("BoxShape3D_pydu0")
-interval = 5
+interval = 7
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("7_pydu0")]
 transform = Transform3D(-0.29145357, 0, 0.956585, 0, 1, 0, -0.956585, 0, -0.29145357, 167.45447, -1.5258789e-05, 7.039032)

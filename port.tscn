@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://d25s24fwtsnj0" path="res://audio/arrive.mp3" id="2_hl5ak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krwo4"]
-albedo_color = Color(0.38681337, 0.23087677, 0.7158771, 1)
+albedo_color = Color(0.64, 0.224, 0, 1)
 
 [sub_resource type="TorusMesh" id="TorusMesh_1f70d"]
 material = SubResource("StandardMaterial3D_krwo4")
@@ -62,5 +62,11 @@ mesh = SubResource("BoxMesh_krwo4")
 stream = ExtResource("2_hl5ak")
 volume_db = 55.841
 unit_size = 100.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1315580385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.74452, 0)
+light_color = Color(0.83, 0.6308, 0.4565, 1)
+light_energy = 50.0
+omni_range = 79.520096
 
 [connection signal="body_entered" from="ShipDetection" to="." method="_on_ship_detection_body_entered"]

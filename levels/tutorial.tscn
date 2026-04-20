@@ -30,12 +30,15 @@ transform = Transform3D(1, 0, 0, 0, 0.23397136, 0.97224355, 0, -0.97224355, 0.23
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("2_rbh7r")]
 transform = Transform3D(-0.0220069, 0, 0.9997578, 0, 1, 0, -0.9997578, 0, -0.0220069, 203.23865, 0, 109.0553)
+speed = 15.0
 
 [node name="Ship3" parent="." unique_id=1667829318 instance=ExtResource("2_rbh7r")]
 transform = Transform3D(-0.2227226, 0, -0.9748819, 0, 1, 0, 0.9748819, 0, -0.2227226, -36.75161, -7.6293945e-06, 66.502495)
+speed = 15.0
 
 [node name="Ship2" parent="." unique_id=186411588 instance=ExtResource("2_rbh7r")]
 transform = Transform3D(0.56403047, 0, -0.8257539, 0, 1, 0, 0.8257539, 0, 0.56403047, 136.04332, 1.5258789e-05, -25.840546)
+speed = 15.0
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
 transform = Transform3D(-0.5945702, 0, -0.80404377, 0, 1, 0, 0.80404377, 0, -0.5945702, 69.70651, 0, -157.32768)

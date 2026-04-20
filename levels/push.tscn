@@ -56,7 +56,7 @@ interval = 15
 [node name="ShipSpawner2" parent="." unique_id=174740086 instance=ExtResource("4_32636")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.266972, 31.69989, -316.43)
 shape = SubResource("BoxShape3D_32636")
-interval = 15
+interval = 10
 
 [node name="Port" parent="." unique_id=1155637826 instance=ExtResource("5_2mjin")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.702, 0, 4.8269043)
@@ -67,5 +67,8 @@ type = 1
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("7_jsl38")]
 transform = Transform3D(-0.99375236, 0, -0.111607626, 0, 1, 0, 0.111607626, 0, -0.99375236, -5.8180084, -1.5258789e-05, -221.70844)
+
+[node name="Ship2" parent="." unique_id=2068746104 instance=ExtResource("7_jsl38")]
+transform = Transform3D(0.9889977, 0, -0.14793034, 0, 1, 0, 0.14793034, 0, 0.9889977, -10.952835, -1.5258789e-05, 144.36534)
 
 [editable path="LevelCommons"]
