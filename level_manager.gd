@@ -33,6 +33,9 @@ func load_next():
 	current_level_id += 1
 	Globals.score = 0
 	
+	if current_level_id == 0:
+		$Start.play()
+	
 	if current_level_id == levels.size():
 		get_tree().change_scene_to_file("uid://bitc64oyshwv4")
 	else:

@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_ship_detection_body_entered(body: Node3D) -> void:
 	body.arrive()
+	$Arrive.play()

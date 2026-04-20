@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blklgxc68wcco" path="res://level_manager.gd" id="1_fvluo"]
 [ext_resource type="AudioStream" uid="uid://catxc261p7utl" path="res://audio/win.mp3" id="2_3maf5"]
+[ext_resource type="AudioStream" uid="uid://xw4nqqdrb0n7" path="res://audio/start.mp3" id="3_gpfvb"]
 
 [node name="LevelManager" type="Node" unique_id=1092392492]
 script = ExtResource("1_fvluo")
@@ -10,3 +11,8 @@ script = ExtResource("1_fvluo")
 process_mode = 3
 stream = ExtResource("2_3maf5")
 volume_db = 9.716
+
+[node name="Start" type="AudioStreamPlayer2D" parent="." unique_id=2069847405]
+process_mode = 3
+stream = ExtResource("3_gpfvb")
+volume_db = 19.146

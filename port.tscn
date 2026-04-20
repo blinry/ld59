@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bc2hehfyao4yn"]
 
 [ext_resource type="Script" uid="uid://dwd8jdg2oydtv" path="res://port.gd" id="1_krwo4"]
+[ext_resource type="AudioStream" uid="uid://d25s24fwtsnj0" path="res://audio/arrive.mp3" id="2_hl5ak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krwo4"]
 albedo_color = Color(0.38681337, 0.23087677, 0.7158771, 1)
@@ -56,5 +57,10 @@ mesh = SubResource("PrismMesh_krwo4")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1261745823]
 transform = Transform3D(0.20380932, 0, 0, 0, 0.20380932, 0, 0, 0, 0.20380932, -0.21761703, 23.069836, 5.0711374)
 mesh = SubResource("BoxMesh_krwo4")
+
+[node name="Arrive" type="AudioStreamPlayer3D" parent="." unique_id=1903073550]
+stream = ExtResource("2_hl5ak")
+volume_db = 55.841
+unit_size = 100.0
 
 [connection signal="body_entered" from="ShipDetection" to="." method="_on_ship_detection_body_entered"]

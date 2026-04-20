@@ -61,7 +61,7 @@ mesh = SubResource("PrismMesh_g4l8x")
 
 [node name="Ray" type="AudioStreamPlayer3D" parent="." unique_id=1592010767]
 stream = ExtResource("3_pbmx5")
-volume_db = 21.301
+volume_db = 74.702
 unit_size = 100.0
 
 [node name="Pick" type="AudioStreamPlayer3D" parent="." unique_id=1835751395]
