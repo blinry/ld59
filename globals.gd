@@ -14,6 +14,7 @@ enum LighthouseType {
 
 var mouse_pos: Vector3
 var score: int
+var explosions = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

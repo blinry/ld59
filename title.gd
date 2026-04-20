@@ -12,4 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
+	LevelManager.current_level_id = -1
 	LevelManager.load_next()
+	Globals.explosions = 0

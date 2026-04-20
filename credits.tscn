@@ -45,6 +45,19 @@ The music is \"Ossuary 1\"
 by Kevin MacLeod."
 horizontal_alignment = 1
 
+[node name="CrashLabel" type="Label" parent="Credits" unique_id=1011977772]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -153.0
+offset_top = 121.0
+offset_right = 156.0
+offset_bottom = 316.0
+grow_horizontal = 2
+text = "You crashed x ships in this playthrough."
+horizontal_alignment = 1
+
 [node name="Button" type="Button" parent="Credits" unique_id=1304653523]
 layout_mode = 1
 anchors_preset = 5
