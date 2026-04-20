@@ -15,3 +15,8 @@ func _on_fullscreen_pressed() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED) 
+
+
+func _on_mute_pressed() -> void:
+	var master_idx = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_idx, not AudioServer.is_bus_mute(master_idx))
