@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://oxqhqjikch46" path="res://ship.gd" id="1_l3rv8"]
 [ext_resource type="Texture2D" uid="uid://dj1kpv8xykp6" path="res://textures/smoke/smoke_particle1-sheet.png" id="2_4cq66"]
-[ext_resource type="ArrayMesh" uid="uid://djm0bdijavclo" path="res://models/shippy.res" id="2_78o8j"]
+[ext_resource type="ArrayMesh" uid="uid://dcrbsjauxho6x" path="res://models/shippy.res" id="2_78o8j"]
 [ext_resource type="Texture2D" uid="uid://b68kn8iqilviy" path="res://textures/explosion/explosion1-sheet.png" id="3_v4325"]
 [ext_resource type="ArrayMesh" uid="uid://drad7581o4igu" path="res://models/prop.res" id="3_xpsff"]
 [ext_resource type="AudioStream" uid="uid://bb81jeiya1ixc" path="res://audio/explode.mp3" id="6_xpsff"]
@@ -166,6 +166,27 @@ unit_size = 100.0
 
 [node name="DespawnTimer" type="Timer" parent="." unique_id=1037435070]
 wait_time = 10.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1694985034]
+transform = Transform3D(1, 0, 0, 0, 0.9675683, 0.2526098, 0, -0.2526098, 0.9675683, 0, 5.3775578, -5.4496098)
+light_color = Color(1, 0.9166666, 0, 1)
+light_energy = 50.0
+spot_range = 138.87872
+spot_angle = 32.895794
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1214827058]
+transform = Transform3D(-4.371139e-08, 0.5927585, -0.80538034, 0, 0.80538034, 0.5927585, 1, 2.5910296e-08, -3.5204295e-08, 0, 12.119156, 4.38645)
+light_color = Color(1, 0.9166666, 0, 1)
+light_energy = 50.0
+spot_range = 49.978012
+spot_angle = 37.292473
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1543143507]
+transform = Transform3D(1.3113416e-07, -0.5927585, 0.80538034, -3.0790577e-15, 0.80538034, 0.5927585, -1, -7.773089e-08, 1.05612884e-07, 0, 12.119156, 4.38645)
+light_color = Color(1, 0.9166666, 0, 1)
+light_energy = 50.0
+spot_range = 49.978012
+spot_angle = 37.292473
 
 [connection signal="timeout" from="CrashParticleTimer" to="." method="_on_crash_particle_timer_timeout"]
 [connection signal="timeout" from="DespawnTimer" to="." method="_on_despawn_timer_timeout"]
