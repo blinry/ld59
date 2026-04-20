@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://bjwo4tjs1vlpp"]
+
+[ext_resource type="Script" uid="uid://cagkxw3vhqxuu" path="res://level.gd" id="1_55b3p"]
+[ext_resource type="PackedScene" uid="uid://clv5nchp7wfnw" path="res://level_commons.tscn" id="1_fcgxq"]
+[ext_resource type="Theme" uid="uid://brt1g2cwxggb" path="res://theme.tres" id="2_i5wbl"]
+[ext_resource type="FontFile" uid="uid://bskvswf8qjf2f" path="res://fonts/trade-winds.ttf" id="3_xw14l"]
+[ext_resource type="Script" uid="uid://dtr45vwkjmxvm" path="res://thumbnail.gd" id="4_7ypjd"]
+[ext_resource type="ArrayMesh" uid="uid://be2webucffl3j" path="res://levels/islands.tres" id="4_xw14l"]
+[ext_resource type="PackedScene" uid="uid://bib0hns3jxd85" path="res://lighthouse.tscn" id="5_t7lj5"]
+[ext_resource type="PackedScene" uid="uid://de42481q0cwhl" path="res://ship.tscn" id="6_iy3j1"]
+
+[node name="Thumbnail" type="Node3D" unique_id=1794984115]
+script = ExtResource("1_55b3p")
+
+[node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("1_fcgxq")]
+
+[node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
+transform = Transform3D(1, 0, 0, 0, 0.7625779, 0.6468963, 0, -0.6468963, 0.7625779, 489.1638, 117.51647, 108.15556)
+
+[node name="CanvasLayer" parent="LevelCommons" index="3" unique_id=1214671894]
+visible = false
+
+[node name="TitleScreen" type="Control" parent="." unique_id=428104562]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_i5wbl")
+script = ExtResource("4_7ypjd")
+
+[node name="ColorRect" type="ColorRect" parent="TitleScreen" unique_id=2146165641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.25882354)
+
+[node name="Label" type="Label" parent="TitleScreen" unique_id=1872337142]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -362.0
+offset_top = 37.0
+offset_right = 396.0
+offset_bottom = 329.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xw14l")
+theme_override_font_sizes/font_size = 200
+text = "Beams"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TitleScreen" unique_id=297656312]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -442.0
+offset_top = 334.0
+offset_right = 454.0
+offset_bottom = 626.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xw14l")
+theme_override_font_sizes/font_size = 200
+text = "Bermuda"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TitleScreen" unique_id=978787720]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.0
+offset_top = 247.0
+offset_right = 81.0
+offset_bottom = 422.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xw14l")
+theme_override_font_sizes/font_size = 120
+text = "~ of ~"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TitleScreen" unique_id=1927161796]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 84.0
+offset_right = -1.0
+offset_bottom = 201.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xw14l")
+theme_override_font_sizes/font_size = 80
+text = "—"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="TitleScreen" unique_id=236768861]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_top = 24.0
+offset_right = 2.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xw14l")
+theme_override_font_sizes/font_size = 80
+text = "—"
+horizontal_alignment = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1204453192]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, -31.916134, 0)
+mesh = ExtResource("4_xw14l")
+
+[node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("5_t7lj5")]
+transform = Transform3D(-0.50835025, 0, -0.86115056, 0, 1, 0, 0.86115056, 0, -0.50835025, 303.92963, 5.705738, -40.888706)
+
+[node name="Lighthouse2" parent="." unique_id=1718310682 instance=ExtResource("5_t7lj5")]
+transform = Transform3D(-0.92245847, 0.0014861432, 0.3860933, -0.0017849419, 0.9999654, -0.008113656, -0.386092, -0.008173664, -0.92242414, 312.38892, 23.777344, -283.9734)
+
+[node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("6_iy3j1")]
+transform = Transform3D(0.39839694, 0, 0.9172131, 0, 1, 0, -0.9172131, 0, 0.39839694, 638.5968, 0, -12.517583)
+
+[node name="Ship2" parent="." unique_id=516383123 instance=ExtResource("6_iy3j1")]
+transform = Transform3D(0.05984649, 0, 0.99820757, 0, 1, 0, -0.99820757, 0, 0.05984649, 697.94794, 0, -57.50695)
+
+[editable path="LevelCommons"]

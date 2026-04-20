@@ -54,14 +54,61 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -382.0
+offset_left = -371.0
 offset_top = 48.0
-offset_right = 376.0
+offset_right = 387.0
 offset_bottom = 165.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_nuqgq")
 theme_override_font_sizes/font_size = 80
-text = "Beams of Bermuda"
+text = "~ Beams    Bermuda ~"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TitleScreen" unique_id=2145342572]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 69.0
+offset_right = 18.0
+offset_bottom = 157.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_nuqgq")
+theme_override_font_sizes/font_size = 50
+text = "of"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TitleScreen" unique_id=896344412]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 84.0
+offset_right = -1.0
+offset_bottom = 201.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_nuqgq")
+theme_override_font_sizes/font_size = 80
+text = "—"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="TitleScreen" unique_id=1880040501]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_top = 24.0
+offset_right = 2.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_nuqgq")
+theme_override_font_sizes/font_size = 80
+text = "—"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="TitleScreen" unique_id=1340736269]
@@ -78,7 +125,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Made in 72 hours
 for Ludum Dare 59
-by nici and blinry"
+by nici & blinry"
 horizontal_alignment = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1648162840]
