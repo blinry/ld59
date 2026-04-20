@@ -19,5 +19,8 @@ func enter_state(state):
 	if state == Globals.GameState.SETUP:
 		get_tree().paused = true
 
+func report_drag():
+	$LevelCommons.lighthouse_moved()
+
 func get_commons():
 	return commons

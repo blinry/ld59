@@ -76,7 +76,11 @@ func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vecto
 		return
 	if event.is_action_pressed("click"):
 		dragged = true
+		report_drag()
 		$Pick.play()
+
+func report_drag():
+	get_tree().get_current_scene().report_drag()
 
 func _on_light_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event.is_action_pressed("click"):

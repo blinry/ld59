@@ -19,7 +19,7 @@ func _on_start_pressed() -> void:
 		get_tree().get_current_scene().enter_state(Globals.GameState.GAME)
 		#$Button.text = "Pause"
 		unpaused.emit()
-		$Button.hide()
+		$StartButton.hide()
 		%Description.hide()
 		%Reset.show()
 		$Woosh.play()
@@ -32,3 +32,5 @@ func _on_reset_pressed() -> void:
 	get_tree().reload_current_scene()
 	Globals.score = 0
 	%Reset.hide()
+	%StartButton.disabled = true
+	%StartButton.text = "(Place your Lighthouses)"

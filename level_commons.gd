@@ -21,3 +21,7 @@ func _input(event):
 	if event.is_action_pressed("cheat"):
 		Globals.score = 999
 		LevelManager.check_win_condition()
+
+func lighthouse_moved():
+	%StartButton.disabled = false
+	%StartButton.text = "Start!"
