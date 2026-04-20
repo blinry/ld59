@@ -20,6 +20,8 @@ func _on_start_pressed() -> void:
 		#$Button.text = "Pause"
 		unpaused.emit()
 		$Button.hide()
+		%Description.hide()
+		%Reset.show()
 	elif get_tree().get_current_scene().state == Globals.GameState.GAME:
 		get_tree().get_current_scene().enter_state(Globals.GameState.SETUP)
 		#$Button.text = "Start"

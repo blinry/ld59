@@ -24,6 +24,7 @@ script = ExtResource("1_frq50")
 
 [node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("2_pbr22")]
 ships_needed = 8
+description = "spiral!"
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
 transform = Transform3D(1, 0, 0, 0, 0.53687257, 0.8436633, 0, -0.8436633, 0.53687257, 72.43472, 234.1472, 338.38657)
