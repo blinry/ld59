@@ -22,6 +22,7 @@ func _on_start_pressed() -> void:
 		$Button.hide()
 		%Description.hide()
 		%Reset.show()
+		$Woosh.play()
 	elif get_tree().get_current_scene().state == Globals.GameState.GAME:
 		get_tree().get_current_scene().enter_state(Globals.GameState.SETUP)
 		#$Button.text = "Start"
@@ -30,3 +31,4 @@ func _on_start_pressed() -> void:
 func _on_reset_pressed() -> void:
 	get_tree().reload_current_scene()
 	Globals.score = 0
+	%Reset.hide()

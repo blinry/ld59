@@ -42,8 +42,11 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if Input.is_action_just_released("click"):
+		if dragged:
+			$Drop.play()
 		dragged = false
 		rotated = false
+		$Ray.stop()
 	if dragged:
 		global_position = Vector3(Globals.mouse_pos.x, global_position.y, Globals.mouse_pos.z)
 	if rotated:
@@ -64,7 +67,9 @@ func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vecto
 		return
 	if event.is_action_pressed("click"):
 		dragged = true
+		$Pick.play()
 
 func _on_light_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	if event.is_action_pressed("click"):
 		rotated = true
+		$Ray.play()

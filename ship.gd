@@ -81,6 +81,7 @@ func explode():
 	
 		$Prop.set_surface_override_material(0, black)
 		crashed = true
+		$Explode.play()
 
 
 func _on_crash_particle_timer_timeout() -> void:

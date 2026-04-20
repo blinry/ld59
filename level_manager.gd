@@ -42,4 +42,5 @@ func load_next():
 func check_win_condition():
 	var ships_needed = get_tree().get_current_scene().get_commons().ships_needed
 	if Globals.score >= ships_needed:
+		$Win.play()
 		load_next()

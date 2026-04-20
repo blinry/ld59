@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cyoqaf2k2gvjo"]
+
+[ext_resource type="Script" uid="uid://blklgxc68wcco" path="res://level_manager.gd" id="1_fvluo"]
+[ext_resource type="AudioStream" uid="uid://catxc261p7utl" path="res://audio/win.mp3" id="2_3maf5"]
+
+[node name="LevelManager" type="Node" unique_id=1092392492]
+script = ExtResource("1_fvluo")
+
+[node name="Win" type="AudioStreamPlayer2D" parent="." unique_id=1600615958]
+process_mode = 3
+stream = ExtResource("2_3maf5")
+volume_db = 9.716

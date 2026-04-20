@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*uid://bm7y861kei8jw"
-LevelManager="*uid://blklgxc68wcco"
 GlobalUI="*uid://dekdovu6l8gui"
+LevelManager="*uid://cyoqaf2k2gvjo"
 
 [display]
 
