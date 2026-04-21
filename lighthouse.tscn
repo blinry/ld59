@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bppf6tq8be2d5" path="res://lighthouse.gd" id="1_rolx0"]
 [ext_resource type="ArrayMesh" uid="uid://b8ok3wya650gj" path="res://models/lighthouse_model.tres" id="2_g4l8x"]
 [ext_resource type="AudioStream" uid="uid://bbfcmmc74ib50" path="res://audio/ray.mp3" id="3_pbmx5"]
+[ext_resource type="Material" uid="uid://bkfvlbe5i1q4o" path="res://yellow_glow_material.tres" id="3_xi327"]
 [ext_resource type="AudioStream" uid="uid://bi204rp5ldfqi" path="res://audio/pick.mp3" id="4_edbo1"]
 [ext_resource type="AudioStream" uid="uid://pygx21odaatf" path="res://audio/drop.mp3" id="5_xi327"]
 
@@ -30,10 +31,12 @@ size = Vector3(300, 2000, 30)
 [node name="Lighthouse" type="StaticBody3D" unique_id=1820272564]
 process_mode = 3
 script = ExtResource("1_rolx0")
+type = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1426643531]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5, 0)
 mesh = ExtResource("2_g4l8x")
+surface_material_override/2 = ExtResource("3_xi327")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=27063354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28.258942, 0)
@@ -51,6 +54,7 @@ shape = SubResource("ConvexPolygonShape3D_rolx0")
 debug_color = Color(0, 1, 0, 0.41960785)
 
 [node name="LightCone" type="MeshInstance3D" parent="LightPivot" unique_id=2143301765]
+unique_name_in_owner = true
 transform = Transform3D(-1, -2.3705553e-07, 3.0755242e-08, -1.5000825e-08, 0.12761866, 1.9836466, -2.3707966e-07, 0.9918233, -0.2552373, 0, -125.88, -992.014)
 mesh = SubResource("CylinderMesh_pbmx5")
 
@@ -61,7 +65,7 @@ mesh = SubResource("PrismMesh_g4l8x")
 
 [node name="Ray" type="AudioStreamPlayer3D" parent="." unique_id=1592010767]
 stream = ExtResource("3_pbmx5")
-volume_db = -5.0
+volume_db = -10.0
 unit_size = 100.0
 pitch_scale = 0.8
 
@@ -74,6 +78,12 @@ unit_size = 100.0
 stream = ExtResource("5_xi327")
 volume_db = 21.301
 unit_size = 100.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1815183845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.353214, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+omni_range = 7.663924
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="input_event" from="." to="." method="_on_lighthouse_input"]

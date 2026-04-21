@@ -42,6 +42,7 @@ speed = 15.0
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("3_0fvvq")]
 transform = Transform3D(-0.5945702, 0, -0.80404377, 0, 1, 0, 0.80404377, 0, -0.5945702, 69.70651, 0, -157.32768)
+type = 0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=70155308]
 collision_layer = 4
@@ -50,6 +51,7 @@ collision_mask = 0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=412496370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)
 mesh = SubResource("CylinderMesh_0fvvq")
+surface_material_override/0 = ExtResource("5_c633x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1689444092]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.25094, 4.088, 0)

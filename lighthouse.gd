@@ -3,6 +3,7 @@ extends StaticBody3D
 
 @onready var light_pivot: Node3D = $LightPivot
 @onready var detection_area: Area3D = %DetectionArea
+@onready var light_cone: MeshInstance3D = %LightCone
 
 var dragged = false
 var rotated = false
@@ -16,7 +17,7 @@ var rotated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	update_color()
 
 func update_color():
 	var color
@@ -34,7 +35,9 @@ func update_color():
 	material.albedo_color = color
 	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	$LightPivot/LightCone.set_surface_override_material(0, material)
+	
+	if light_cone:
+		light_cone.set_surface_override_material(0, material)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -68,7 +71,7 @@ func _physics_process(delta: float) -> void:
 		for boat in detection_area.get_overlapping_bodies():
 			boat.steer(self, delta, type)
 
-func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_lighthouse_input(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if not "state" in get_tree().get_current_scene():
 		return
 	var state = get_tree().get_current_scene().state
@@ -82,7 +85,7 @@ func _on_lighthouse_input(camera: Node, event: InputEvent, event_position: Vecto
 func report_drag():
 	get_tree().get_current_scene().report_drag()
 
-func _on_light_input(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+func _on_light_input(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event.is_action_pressed("click"):
 		rotated = true
 		$Ray.play()
