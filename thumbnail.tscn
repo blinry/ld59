@@ -15,10 +15,13 @@ script = ExtResource("1_55b3p")
 [node name="LevelCommons" parent="." unique_id=2043989954 instance=ExtResource("1_fcgxq")]
 
 [node name="Camera" parent="LevelCommons" index="0" unique_id=1282504663]
-transform = Transform3D(1, 0, 0, 0, 0.7625779, 0.6468963, 0, -0.6468963, 0.7625779, 489.1638, 117.51647, 108.15556)
+transform = Transform3D(1, 0, 0, 0, 0.70329535, 0.71089774, 0, -0.71089774, 0.70329535, 472.23447, 151.92256, 108.789215)
 
 [node name="CanvasLayer" parent="LevelCommons" index="3" unique_id=1214671894]
 visible = false
+
+[node name="Nebel" parent="LevelCommons" index="5" unique_id=1920904504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.08524, 50, 0)
 
 [node name="TitleScreen" type="Control" parent="." unique_id=428104562]
 layout_mode = 3
@@ -45,11 +48,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -362.0
-offset_top = 37.0
-offset_right = 396.0
-offset_bottom = 329.0
+offset_left = -300.0
+offset_top = 92.0
+offset_right = 458.0
+offset_bottom = 384.0
 grow_horizontal = 2
+scale = Vector2(0.8320868, 0.8208703)
 theme_override_fonts/font = ExtResource("3_xw14l")
 theme_override_font_sizes/font_size = 200
 text = "Beams"
@@ -60,11 +64,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -442.0
-offset_top = 334.0
-offset_right = 454.0
-offset_bottom = 626.0
+offset_left = -370.0
+offset_top = 341.0
+offset_right = 526.0
+offset_bottom = 633.0
 grow_horizontal = 2
+scale = Vector2(0.8320868, 0.8208703)
 theme_override_fonts/font = ExtResource("3_xw14l")
 theme_override_font_sizes/font_size = 200
 text = "Bermuda"
@@ -75,11 +80,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -52.0
-offset_top = 247.0
-offset_right = 81.0
-offset_bottom = 422.0
+offset_left = -130.0
+offset_top = 271.0
+offset_right = 201.0
+offset_bottom = 446.0
 grow_horizontal = 2
+scale = Vector2(0.8320868, 0.8208703)
 theme_override_fonts/font = ExtResource("3_xw14l")
 theme_override_font_sizes/font_size = 120
 text = "~ of ~"
@@ -122,15 +128,15 @@ transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, -31.916134, 0)
 mesh = ExtResource("4_xw14l")
 
 [node name="Lighthouse" parent="." unique_id=1820272564 instance=ExtResource("5_t7lj5")]
-transform = Transform3D(-0.50835025, 0, -0.86115056, 0, 1, 0, 0.86115056, 0, -0.50835025, 303.92963, 5.705738, -40.888706)
+transform = Transform3D(-0.50835025, 0, -0.86115056, 0, 1, 0, 0.86115056, 0, -0.50835025, 314.78494, 15.848827, -59.277752)
 
 [node name="Lighthouse2" parent="." unique_id=1718310682 instance=ExtResource("5_t7lj5")]
-transform = Transform3D(-0.92245847, 0.0014861432, 0.3860933, -0.0017849419, 0.9999654, -0.008113656, -0.386092, -0.008173664, -0.92242414, 312.38892, 23.777344, -283.9734)
+transform = Transform3D(-0.80318415, 0.0014861432, 0.5957289, -0.0036756895, 0.9999654, -0.007450283, -0.59571934, -0.008173664, -0.80315113, 312.38892, 23.777344, -283.9734)
 
 [node name="Ship" parent="." unique_id=1958634124 instance=ExtResource("6_iy3j1")]
-transform = Transform3D(0.39839694, 0, 0.9172131, 0, 1, 0, -0.9172131, 0, 0.39839694, 638.5968, 0, -12.517583)
+transform = Transform3D(0.39839694, 0, 0.9172131, 0, 1, 0, -0.9172131, 0, 0.39839694, 617.69885, 0, -36.33007)
 
 [node name="Ship2" parent="." unique_id=516383123 instance=ExtResource("6_iy3j1")]
-transform = Transform3D(0.05984649, 0, 0.99820757, 0, 1, 0, -0.99820757, 0, 0.05984649, 697.94794, 0, -57.50695)
+transform = Transform3D(0.05984649, 0, 0.99820757, 0, 1, 0, -0.99820757, 0, 0.05984649, 670.15344, 0, -72.713066)
 
 [editable path="LevelCommons"]
